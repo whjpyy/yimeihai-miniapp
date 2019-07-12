@@ -1,0 +1,14 @@
+/* pages/center/myTeam/detail/detail.wxss */
+@import '/modules/common/style/form.wxss';
+@import '/modules/common/style/remark.wxss';
+
+page {
+  padding-bottom: 30rpx;
+}
+.head {
+  border-radius:50%;
+  width:90rpx;
+  height:90rpx;
+  display: inline-block;
+  vertical-align: middle;
+}

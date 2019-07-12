@@ -1,0 +1,15 @@
+<!--pages/serveItem/serveItem.wxml-->
+<block wx:if="{{ dataLoaded }}">
+<view class="list clearfix">
+  <block wx:for="{{ serve }}" wx:key="{{ index }}">
+    <view class="item" data-url="/pages/serveDetail/serveDetail?id={{item.id}}" bindtap="jumpLink">
+      <image src="{{ item.logo }}"></image>
+      <text class="name">{{ item.name }}</text>
+      <view class="tags">
+        <text>{{ item.intro || item.remark }}</text>
+      </view>
+    </view>
+  </block>
+</view>
+<bottomOut showBar="{{ showBottomOut }}" />
+</block>

@@ -1,0 +1,29 @@
+/* pages/cardPackage/success/success.wxss */
+@import '/modules/common/style/remark.wxss';
+/* @import '/modules/common/style/submitBar.wxss'; */
+
+.success {
+  height: 160rpx;
+  font-size:36rpx;
+  font-weight:bold;
+  color:rgba(54,54,54,1);
+}
+.success image {
+  width:64rpx;
+  height:64rpx;
+  margin-right: 30rpx;
+}
+
+.tips {
+  width: 100%;
+  height:100rpx;
+  font-size:26rpx;
+  font-weight:500;
+  text-align: center;
+  color:rgba(53,53,53,1);
+  line-height: 100rpx;
+  background:rgba(243,243,243,1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

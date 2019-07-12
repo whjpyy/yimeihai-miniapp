@@ -1,0 +1,157 @@
+/* banner */
+.banner {
+  width: 100%;
+  height: 435rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.banner image {
+  width: 100%;
+  height: 100%;
+}
+.banner .wx-swiper-dots {
+  top: 325rpx;
+}
+.banner .wx-swiper-dot{
+    width:12rpx;
+    height: 12rpx; 
+    display: inline-flex;
+    justify-content: space-between;
+}
+.banner .wx-swiper-dot::before{
+    content: '';
+    flex-grow: 1;  
+    background: rgba(0,0,0,.3);
+    border-radius: 0;
+}
+.banner .wx-swiper-dot-active::before{
+    background:rgba(255,255,255,1);    
+}
+/* 菜单 */
+.menu {
+  background-color: #fff;
+  box-shadow: 0 3rpx 30rpx rgba(94,94,94,.2);
+  width: 700rpx;
+  margin: 360rpx auto 30rpx;
+  border-radius: 10rpx;
+  position: relative;
+  z-index: 2;
+}
+.menu-item {
+  text-align: center;
+  padding: 20rpx 0 30rpx;
+  position: relative;
+  font-size: 0;
+}
+.menu-item .box {
+  display: inline-block;
+  position: relative;
+}
+.menu-item .menu-icon {
+  width: 143rpx;
+  height: 143rpx;
+  display: block;
+  margin: 0 auto;
+}
+.menu-item .menu-text {
+  font-size: 30rpx;
+  display: block;
+}
+.menu-item .menu-tag {
+  width: 90rpx;
+  height: 33rpx;
+  position: absolute;
+  right: -30rpx;
+  top: 20rpx;
+}
+/* 图片 */
+.active {
+  position: relative;
+  padding-top: 60rpx;
+}
+.active-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.active-title image {
+  width: 296rpx;
+  height: 74rpx;
+  margin-left: 25rpx;
+}
+.active-items {
+  height: 207rpx;
+}
+.active-items image {
+  width: 100%;
+  height: 207rpx;
+}
+/* 服务项目 */
+.serve-items {
+  height: 270rpx;
+}
+.serve-item {
+  width: 270rpx;
+  margin: 0 auto;
+}
+.serve-item image {
+  border-radius: 8rpx;
+  width: 100%;
+  height: 168rpx;
+}
+.serve-item .name {
+  color: #333333;
+  font-size: 26rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 15rpx;
+}
+.serve-item .tags {
+  font-size: 0;
+  white-space: nowrap;
+  margin-top: 10rpx;
+}
+.serve-item .tags text {
+  color: #f9a741;
+  font-size: 22rpx;
+  line-height: 35rpx;
+  border: #f9a741 solid 1px;
+  border-radius: 8rpx;
+  padding: 0 8rpx;
+  display: inline-block;
+}
+/* 医疗机构 */
+.m-items {
+  width: 700rpx;
+  margin: 0 auto;
+}
+/* 案例 */
+.case {
+  border-top: #f9f9f9 solid 20rpx;
+}
+.case-items {
+  height: 484rpx;
+}
+.case-item {
+  width: 710rpx;
+}
+
+.activity-row{
+  width: 700rpx;
+  margin: 0 auto;
+  height: 220rpx;
+  display: flex;
+  justify-content:space-around
+}
+
+.activity-row>view{
+  width: 340rpx;
+  height: 100%;
+}
+.activity-row image{
+  width: 100%;
+  height: 100%
+}

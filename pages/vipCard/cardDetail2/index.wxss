@@ -1,0 +1,5 @@
+/* pages/vipCard/cardDetail2/index.wxss */
+@import '/modules/common/style/submitBar.wxss';
+image{
+  width: 100%;
+}

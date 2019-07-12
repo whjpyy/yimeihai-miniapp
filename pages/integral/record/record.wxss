@@ -1,0 +1,2 @@
+/* pages/integral/record/record.wxss */
+@import '/modules/common/style/integral.wxss';

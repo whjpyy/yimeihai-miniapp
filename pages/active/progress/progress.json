@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "活动流程",
+  "usingComponents": {
+    "authDialog": "/modules/authDialog/authDialog",
+    "coTitle": "/modules/coTitle/coTitle",
+    "progress": "/modules/progress/progress",
+    "van-popup": "/miniprogram_npm/vant-weapp/popup/index",
+    "van-picker": "/miniprogram_npm/vant-weapp/picker/index"
+  }
+}

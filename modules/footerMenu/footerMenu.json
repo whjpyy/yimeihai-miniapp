@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "tabbar": "/modules/tabbar/tabbar",
+    "tabbarItem": "/modules/tabbarItem/tabbarItem"
+  }
+}

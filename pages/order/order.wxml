@@ -1,0 +1,151 @@
+<!--pages/order/order.wxml-->
+<form bindsubmit="formSubmit">
+<progress title="购买流程" idx="{{ progressIndex }}" type="order" />
+<view class="infos" wx:if="{{ progressIndex == 0 }}">
+  <view class="base">
+    <coTitle mainTitle="个人信息" showMore="{{ false }}" />
+    <view class="co__form items">
+      <!-- <view class="item">
+        <text>姓名：</text>
+        <input placeholder="(必填)请输入真实姓名" name="userName"></input>
+      </view>
+      <view class="item">
+        <text>身份证号：</text>
+        <input placeholder="(必填)请输入对应身份证号码" name="identCard"></input>
+      </view> -->
+      <view class="item">
+        <text>手机号：</text>
+        <input placeholder="(必填)请输入手机号" type="number" maxlength="11" value="{{ userMobile }}" name="userMobile" disabled="true"></input>
+      </view>
+    </view>
+  </view>
+  <view class="recomand header-line" wx:if="{{ !isRecommend }}">
+    <coTitle mainTitle="推荐人信息" showMore="{{ false }}" />
+    <view class="co__form items">
+      <view class="item">
+        <text>推荐人手机号：</text>
+        <input placeholder="(选填)请输入对方注册手机号" type="number" maxlength="11" name="recommendMobile" value="{{ recommendMobile }}"></input>
+      </view>
+      <view class="item">
+        <text>推荐人邀请码：</text>
+        <input placeholder="(选填)请输入推荐人邀请码" name="recommendInvitationCode" value="{{ recommendInvitationCode }}"></input>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="flex-c times" wx:elif="{{ progressIndex == 1 }}">
+  <view class="pay-time">
+    <view class="surplus">剩余支付时间：<text class="minute">{{ minute }}</text>分<text class="second">{{ second }}</text>秒</view>
+    <view class="tips">请核对信息后支付</view>
+  </view>
+</view>
+<view class="flex-c success" wx:else>
+  <view class="flex-vc box">
+    <image src="/assets/ico_check_green.png"></image>
+    <view class="words">
+      <view class="tips">订单支付成功</view>
+      <view class="text">商品已发放至您的卡包</view>
+    </view>
+  </view>
+</view>
+<view class="recommand" wx:if="{{ progressIndex > 0 && recommend }}">
+  <coTitle mainTitle="推荐人信息" showMore="{{ false }}" />
+  <view class="co__form items">
+    <view class="item">
+      <text>头像</text>
+      <view>
+        <image src="{{ referrerIcon }}" class="header"></image>
+      </view>
+    </view>
+    <view class="item">
+      <text>昵称：</text>
+      <view>{{ referrerName }}</view>
+    </view>
+    <view class="item">
+      <text>注册手机号：</text>
+      <view>{{ referrerMobile }}</view>
+    </view>
+    <view class="item">
+      <text>会员等级：</text>
+      <view>{{ referrerLevelName }}</view>
+    </view>
+    <view class="item">
+      <text>用户ID：</text>
+      <view>{{ referrerCode }}</view>
+    </view>
+    <view class="item">
+      <text>注册时间：</text>
+      <view>{{ referrerCreateTime }}</view>
+    </view>
+  </view>
+</view>
+<view class="co__form pay-way {{ progressIndex > 0 ? recommend ? 'header-line' : '' : 'footer-line' }}">
+  <view class="item">
+    <text>支付方式：</text>
+    <view>
+      <view class="way">
+        <image src="/assets/ico_pay_for_wx.png"></image>
+        <text>微信支付</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="buy {{ progressIndex == 0 ? '' : 'header-line' }}" style='display:none'>
+  <coTitle mainTitle="购买物品" showMore="{{ false }}" />
+  <view class="card">
+    <image src="/assets/bg_card_buy.png"></image>
+    <view class="intros">
+      <view class="name">{{ consumptionCardName }}</view>
+      <view class="validity">{{ consumptionCardValidate }}</view>
+      <view class="price"><text>特惠价：</text>￥{{ consumptionCardPrice }}</view>
+      <view class="tips">注：支付后不予退款</view>
+    </view>
+  </view>
+</view>
+<view class="msg" wx:if="{{ progressIndex > 0 }}">
+  <coTitle mainTitle="其它信息" showMore="{{ false }}" />
+  <block wx:if="{{ progressIndex == 1 }}">
+    <view class="co__remark">
+      <view>联系电话：{{ userMobile }}</view>
+      <view>订单号：{{ orderId }}</view>
+      <view>创建时间：{{ createTime }}</view>
+      <view>支付状态：{{ statusText }}</view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="co__remark">
+      <view>联系电话：{{ userMobile }}</view>
+      <view>订单号：{{ orderId }}</view>
+      <view>创建时间：{{ createTime }}</view>
+      <view>支付时间：{{ payTime }}</view>
+      <view>支付方式：{{ payMode }}</view>
+      <view>商品类型：{{ merchandise }}</view>
+      <view>支付状态：{{ statusText }}</view>
+      <view>交易流水号：{{ transactionNumber }}</view>
+    </view>
+  </block>
+</view>
+<view class="co__submit-bar" wx:if="{{ progressIndex == 0 || progressIndex == 1 }}">
+  <view class="text price">￥{{ consumptionCardPrice }}</view>
+  <view class="btn orange-btn" wx:if="{{ progressIndex == 1 }}" bindtap="cancelOrder">取消订单</view>
+  <button class="btn red-btn" form-type="submit" wx:if="{{ progressIndex == 0 }}">提交订单</button>
+  <view class="btn red-btn" bindtap="submit" wx:else>立即支付</view>
+</view>
+<view class="co__submit-bar" wx:else>
+  <navigator url="/pages/cardPackage/cardPackage" open-type="reLaunch" class="btn orange-btn flex-f">查看卡包</navigator>
+  <navigator url="/pages/index/index" open-type="reLaunch" class="btn red-btn flex-f">返回首页</navigator>
+</view>
+</form>
+<van-dialog use-slot show="{{ showConfirmDialog }}" show-cancel-button title="请确认邀请人信息" bind:confirm="saveOrder">
+  <view class="info-slot">
+    <view class="flex-vc bindInfos">
+      <image class="avatar" src="{{ bindInfos.avatar }}"></image>
+      <view class="flex-f b-infos">
+        <view class="name">{{ bindInfos.name }}</view>
+        <view class="id">ID：{{ bindInfos.id }}</view>
+        <view class="mobile">注册手机号：{{ bindInfos.mobile }}</view>
+      </view>
+    </view>
+    <view class="tips">注：一旦确认后，将绑定上下级关系</view>
+  </view>
+</van-dialog>

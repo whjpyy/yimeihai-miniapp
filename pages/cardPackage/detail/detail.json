@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "消费卡详情",
+  "usingComponents": {
+    "coTitle": "/modules/coTitle/coTitle"
+  }
+}

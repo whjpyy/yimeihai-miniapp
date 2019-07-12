@@ -1,0 +1,29 @@
+
+.co__remark {
+  background:rgba(241,241,241,1);
+  border-radius:10rpx;
+  width: 700rpx;
+  margin: 0 auto;
+  padding: 20rpx 30rpx;
+}
+.co__remark view {
+  font-size:26rpx;
+  font-weight:500;
+  color:rgba(63,63,63,1);
+  line-height: 45rpx;
+  position: relative;
+  /* padding: 10rpx 0 10rpx 20rpx; */
+  padding: 5rpx 0;
+}
+.co__remark .li {
+  padding-left: 30rpx;
+}
+.co__remark .li:before {
+  content: '';
+  width:10rpx;
+  height:10rpx;
+  background:rgba(211,166,143,1);
+  position: absolute;
+  top: 27rpx;
+  left: 0;
+}

@@ -1,0 +1,37 @@
+<!--pages/center/myTeam/myTeam.wxml-->
+<view class="flex-hcb top">
+  <view class="flex-vc uper" wx:if="{{ prevTotal }}">
+    <image src="/assets/ico_uper.png"></image>
+    <text>上级人数：{{ prevTotal }}人</text>
+  </view>
+  <view class="flex-vc downer">
+    <image src="/assets/ico_downer.png"></image>
+    <text>团队人数：{{ teamTotal }}人</text>
+  </view>
+</view>
+<view class="list">
+  <view class="filter">
+    <view class="lv {{ level == 1 ? 'active' : '' }}" id="lv1" bindtap="onFilter">I级</view>
+    <view class="lv {{ level == 2 ? 'active' : '' }}" id="lv2" bindtap="onFilter">II级</view>
+    <view class="lv {{ level == 3 ? 'active' : '' }}" id="lv3" bindtap="onFilter">III级</view>
+  </view>
+  <view class="items" wx:if="{{teams.length}}">
+    <block wx:for="{{ teams }}" wx:key="{{ index }}">
+      <view class="item">
+        <view class="flex-vc">
+        <navigator style='flex:1' url="/pages/center/myTeam/detail/detail?id={{item.id}}" class="flex-vc">
+          <image src="{{ item.icon }}"></image>
+          <view class="flex-f infos">
+            <view class="nick">{{ item.fullName }}</view>
+            <view class="tel">{{ item.mobile }}</view>
+          </view>
+          <image class="link" src="/assets/ico_link_arrow_right_gray.png"></image>
+        </navigator>
+        </view>
+      </view>
+    </block>
+  </view>
+  <empty tips="抱歉，暂无团队成员~" wx:else />
+</view>
+<!-- 授权弹窗 -->
+<authDialog bind:authover="onAuthOver" />

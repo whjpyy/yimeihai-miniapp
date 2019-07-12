@@ -1,0 +1,15 @@
+
+.empty {
+  padding-top: 155rpx;
+}
+.empty image {
+  width:194rpx;
+  height:225rpx;
+  margin: 0 auto;
+}
+.empty .text {
+  text-align: center;
+  font-size:28rpx;
+  font-weight:500;
+  color:rgba(61,61,61,1);
+}

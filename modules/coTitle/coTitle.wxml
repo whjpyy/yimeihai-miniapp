@@ -1,0 +1,8 @@
+<view class="co-title">
+  <view class="title">
+    <image class="title-icon" src="/assets/ico_title.png"></image>
+    <text class="main-title">{{ mainTitle }}</text>
+    <text class="sub-title">{{ subTitle }}</text>
+  </view>
+  <view class="more" wx:if="{{ showMore }}" bindtap="jumpLink">查看更多<image src="/assets/ico_arrow_right.png" class="link-icon"></image></view>
+</view>

@@ -1,0 +1,72 @@
+/* pages/myApply/myApply.wxss */
+page {
+  padding-top: 94rpx;
+  padding-bottom: 30rpx;
+}
+
+.top {
+  width: 100%;
+  height:94rpx;
+  background:rgba(244,244,244,1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.top view {
+  height: 100%;
+}
+.top text {
+  font-size:30rpx;
+  font-weight:bold;
+  color:rgba(3,3,3,1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.top image {
+  width:17rpx;
+  height:12rpx;
+  margin-left: 20rpx;
+}
+
+.list {
+  margin-top: 10rpx;
+}
+.list .li {
+  width:700rpx;
+  margin: 30rpx auto 0;
+  padding: 0 15rpx;
+  background:rgba(255,255,255,1);
+  box-shadow:0rpx 2rpx 18rpx 0rpx rgba(251,124,124,0.29);
+  border-radius:10rpx;
+}
+.list .top-bar {
+  height: 87rpx;
+  font-size:28rpx;
+  font-weight:500;
+  color:rgba(96,96,96,1);
+  border-bottom: rgba(211, 211, 211, .33) solid 1rpx;
+}
+.list .bottom-bar {
+  line-height: 40rpx;
+  padding: 35rpx 15rpx;
+}
+.list .bottom-bar .name {
+  font-size:30rpx;
+  font-weight:bold;
+  color:rgba(29,29,29,1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.list .bottom-bar .date {
+  font-size:28rpx;
+  font-weight:500;
+  color:rgba(63,63,63,1);
+  margin-top: 25rpx;
+}
+.list .bottom-bar image {
+  width:18rpx;
+  height:30rpx;
+}

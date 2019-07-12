@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "选择预约商家",
+  "usingComponents": {
+    "empty": "/modules/empty/empty"
+  }
+}

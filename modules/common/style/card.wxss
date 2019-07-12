@@ -1,0 +1,64 @@
+.content {
+  margin-top: 20rpx;
+}
+
+.items, .merchs, .rules {
+  width: 700rpx;
+  margin: 0 auto;
+}
+.items navigator {
+  border-bottom: rgba(211, 211, 211, .33) solid 1rpx;
+  padding: 35rpx 42rpx;
+}
+.items navigator:first-child {
+  padding-top: 25rpx;
+}
+.items navigator:last-child {
+  border-bottom: none;
+}
+.items text {
+  font-size:30rpx;
+  font-weight:500;
+  color:rgba(77,77,77,1);
+  line-height:41rpx;
+}
+
+.section-line {
+  border-top: rgba(249,249,249,1) solid 20rpx;
+  padding-top: 10rpx;
+}
+.merchs navigator {
+  border-bottom: rgba(211, 211, 211, .33) solid 1rpx;
+  padding: 25rpx 0;
+}
+.merchs navigator:last-child {
+  border-bottom: none;
+}
+.merchs navigator:first-child {
+  padding-top: 10rpx;
+}
+.merchs image {
+  width:170rpx;
+  height:154rpx;
+}
+.merchs .infos {
+  margin-left: 25rpx;
+  height:154rpx;
+}
+.merchs .name {
+  font-size:30rpx;
+  font-weight:bold;
+  color:rgba(25,25,25,1);
+  line-height:41rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.merchs .area {
+  font-size:26rpx;
+  font-weight:400;
+  color:rgba(250,159,76,1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

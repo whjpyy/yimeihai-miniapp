@@ -1,0 +1,3 @@
+.case-item {
+  margin-bottom: 25rpx;
+}

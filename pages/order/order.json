@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "填写订单",
+  "usingComponents": {
+    "coTitle": "/modules/coTitle/coTitle",
+    "progress": "/modules/progress/progress",
+    "van-dialog": "/miniprogram_npm/vant-weapp/dialog/index"
+  }
+}

@@ -1,0 +1,74 @@
+
+.m-item.pt-0 {
+  padding-top: 0;
+}
+.m-item.bb-none {
+  border-bottom: none;
+}
+.m-item {
+  border-bottom: #d3d3d3 solid 1rpx;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.m-item image, .m-infos {
+  height: 262rpx;
+}
+.m-infos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.m-item image {
+  width: 287rpx;
+}
+.m-infos {
+  margin-left: 30rpx;
+  padding: 5rpx 0 10rpx;
+}
+.m-infos .name {
+  color: #191919;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  max-height: 80rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+}
+.m-infos .area {
+  color: #ffb31a;
+  font-size: 26rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.m-infos .addr {
+  color: #727272;
+  font-size: 26rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.m-infos .tel {
+  font-size: 0;
+  white-space: nowrap;
+}
+.m-infos .tel image {
+  width: 29rpx;
+  height: 31rpx;
+  position: relative;
+  top: 2rpx;
+}
+.m-infos .tel-box {
+  background-color: #fff7cd;
+  padding: 0 10rpx;
+  display: inline-flex;
+  height: 35rpx;
+  color: #353431;
+  font-size: 24rpx;
+  align-items: center;
+}

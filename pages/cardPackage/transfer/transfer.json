@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "转让赠与",
+  "usingComponents": {
+    "coTitle": "/modules/coTitle/coTitle",
+    "van-dialog": "/miniprogram_npm/vant-weapp/dialog/index"
+  }
+}

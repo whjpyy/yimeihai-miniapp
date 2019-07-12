@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "会员卡列表",
+  "usingComponents": {
+    "authDialog": "/modules/authDialog/authDialog",
+    "bottomOut": "/modules/bottomOut/bottomOut",
+    "empty": "/modules/empty/empty"
+  }
+}

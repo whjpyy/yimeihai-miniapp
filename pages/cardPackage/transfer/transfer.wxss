@@ -1,0 +1,51 @@
+/* pages/cardPackage/transfer/transfer.wxss */
+@import '/modules/common/style/remark.wxss';
+@import '/modules/common/style/submitBar.wxss';
+@import '/modules/common/style/form.wxss';
+
+.items .item:last-child {
+  border-bottom:rgba(211, 211, 211, .33) solid 1rpx;
+}
+
+.info-slot {
+  padding: 30rpx 25rpx 50rpx;
+}
+.info-slot .b-infos {
+  line-height: 45rpx;
+}
+.info-slot .bindInfos {
+  padding: 25rpx;
+  background:rgba(255,233,233,1);
+  border-radius:10rpx;
+}
+.info-slot .avatar {
+  width:89rpx;
+  height:89rpx;
+  border-radius:50%;
+  margin-right: 30rpx;
+}
+.info-slot .name {
+  font-size:28rpx;
+  font-weight:bold;
+  color:rgba(63,63,63,1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.info-slot .id {
+  font-size:24rpx;
+  font-weight:500;
+  color:rgba(96,96,96,1);
+}
+.info-slot .mobile {
+  font-size:24rpx;
+  font-weight:500;
+  color:rgba(97,97,97,1);
+}
+.info-slot .tips {
+  font-size:24rpx;
+  font-weight:500;
+  color:rgba(63,63,63,1);
+  text-align: center;
+  margin-top: 30rpx;
+}

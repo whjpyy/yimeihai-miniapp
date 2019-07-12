@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "机构列表",
+  "usingComponents": {
+    "medicalItem": "/modules/medicalItem/medicalItem",
+    "bottomOut": "/modules/bottomOut/bottomOut"
+  }
+}

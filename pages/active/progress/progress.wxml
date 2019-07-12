@@ -1,0 +1,172 @@
+<!--pages/active/progress/progress.wxml-->
+<block wx:if="{{ dataLoaded }}">
+<form bindsubmit="formSubmit">
+<view class="flex-c success" wx:if="{{ progressIndex == 0 && applyIndex == 1 }}">
+  <image src="/assets/ico_check_green.png"></image>
+  <text>报名成功</text>
+</view>
+<progress title="活动流程" idx="{{ progressIndex }}" type="active" />
+<view class="infos" wx:if="{{ progressIndex == 0 && applyIndex == 0 }}">
+  <view class="apply">
+    <coTitle mainTitle="报名信息" showMore="{{ false }}" />
+    <view class="co__form items">
+      <view class="item">
+        <text>姓名：</text>
+        <input placeholder="(必填)请输入报名人名称" name="purchaser"></input>
+      </view>
+      <view class="item">
+        <text>联系电话：</text>
+        <input placeholder="(必填)请输入手机号" type="number" maxlength="11" value="{{ purchaserMobile }}" name="purchaserMobile" disabled="true"></input>
+      </view>
+      <view class="item">
+        <text>身份证号：</text>
+        <input placeholder="(必填)请输入报名人身份证号码" name="purchaserIdentId"></input>
+      </view>
+    </view>
+  </view>
+  <view class="recommend top-line" wx:if="{{ !isRecommend }}">
+    <coTitle mainTitle="推荐人信息" showMore="{{ false }}" />
+    <view class="co__form items">
+      <view class="item">
+        <text>推荐人手机号：</text>
+        <input placeholder="(选填)请输入对方注册手机号" type="number" maxlength="11" name="recommendMobile" value="{{ recommendMobile }}"></input>
+      </view>
+      <view class="item">
+        <text>推荐人邀请码：</text>
+        <input placeholder="(选填)请输入推荐人邀请码" name="recommendInvitationCode" value="{{ recommendInvitationCode }}"></input>
+      </view>
+    </view>
+  </view>
+  <view class="order top-line">
+    <coTitle mainTitle="预约就诊信息" showMore="{{ false }}" />
+    <view class="co__form items">
+      <!-- <view class="item">
+        <text>地点：</text>
+        <view bindtap="addrPicker">
+          <view class="link">
+            <text>{{ addrPickerValue }}</text>
+            <image src="/assets/ico_link_arrow_right.png"></image>
+          </view>
+        </view>
+      </view> -->
+      <view class="item">
+        <text>就诊机构：</text>
+        <!-- <view bindtap="orgPicker"> -->
+        <view bindtap="getOrg">
+          <view class="link">
+            <text>{{ orgPickerValue }}</text>
+            <image src="/assets/ico_link_arrow_right.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<block wx:if="{{ (progressIndex == 0 && applyIndex > 0) || progressIndex > 0  }}">
+  <view class="infos">
+    <view class="apply">
+      <coTitle mainTitle="报名信息" showMore="{{ false }}" />
+      <view class="co__form items">
+        <view class="item">
+          <text>姓名：</text>
+          <view>{{ purchaser }}</view>
+        </view>
+        <view class="item">
+          <text>联系电话：</text>
+          <view>{{ purchaserMobile }}</view>
+        </view>
+        <view class="item">
+          <text>身份证号：</text>
+          <view>{{ purchaserIdentId ? purchaserIdentId : '未填' }}</view>
+        </view>
+      </view>
+    </view>
+    <view class="recommend top-line" wx:if="{{ recommendMobile }}">
+      <coTitle mainTitle="推荐人信息" showMore="{{ false }}" />
+      <view class="co__form items">
+        <view class="item">
+          <text>推荐人手机号：</text>
+          <view>{{ recommendMobile ? recommendMobile : '未填' }}</view>
+        </view>
+        <view class="item">
+          <text>推荐人邀请码：</text>
+          <view>{{ recommendInvitationCode ? recommendInvitationCode : '未填' }}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="order">
+    <coTitle mainTitle="预约就诊信息" showMore="{{ false }}" />
+    <view class="co__form items">
+      <!-- <view class="item">
+        <text>地点：</text>
+        <view>{{ address }}</view>
+      </view> -->
+      <view class="item">
+        <text>就诊机构：</text>
+        <view>
+            <text>{{ shopName }}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+<view class="tips-a" wx:if="{{ progressIndex == 0 && applyIndex == 1 }}">*请保持电话通畅，美容顾问稍后与您联系~</view>
+<view class="order-info" wx:if="{{ (progressIndex == 0 && applyIndex == 2) || progressIndex > 0  }}">
+  <coTitle mainTitle="其他报名信息" showMore="{{ false }}" />
+  <view class="co__remark">
+    <view>报名单号：{{ reportOrderId }}</view>
+    <view>报名时间：{{ createTime }}</view>
+    <view>报名状态：{{ applyState }}</view>
+  </view>
+</view>
+<view class="feedback-info" wx:if="{{ progressIndex >= 1 && visits.length }}">
+  <coTitle mainTitle="回访信息" showMore="{{ false }}" />
+  <view class="co__remark">
+    <block wx:for="{{ visits }}" wx:key="{{ index }}">
+      <view class="flex-hcb">
+        <text>{{ item.createTime }}</text>
+        <text>{{ item.remark }}</text>
+      </view>
+    </block>
+  </view>
+</view>
+<view class="use-info" wx:if="{{  progressIndex >= 2 && delegateTime }}">
+  <coTitle mainTitle="到店信息" showMore="{{ false }}" />
+  <view class="items">
+    <view>{{ delegateTime }}</view>
+    <view>机构名称：<text class="red">{{ delegateShopName }}</text></view>
+    <!-- <view>地址：{{ delegateAddress }}</view> -->
+    <view class="flex-vc btn1">
+      <text data-tel="{{ shopPhone }}" bindtap="makeCall">电话咨询</text>
+      <navigator url="/pages/orgDetail/orgDetail?id={{delegateShopId}}">商家详情</navigator>
+    </view>
+    <view class="more1 clearfix">
+      <view class="lab1">服务项目：</view>
+      <view class="det0">
+        <block wx:for="{{services}}" wx:key="{{index}}">
+          <text class="{{ index ? 'det2' : 'det1' }}">{{ item.serviceName }}</text>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="re-info" wx:if="{{ progressIndex >= 3 && rebateConsumerStartTime  }}">
+  <coTitle mainTitle="消费获得" showMore="{{ false }}" />
+  <view class="co__remark">
+    <view>消费金额：{{ amount }}元</view>
+    <view>{{ rebateDesc }}</view>
+  </view>
+</view>
+<view class="co__submit-bar" wx:if="{{ progressIndex == 0 && applyIndex == 0 }}">
+  <button form-type="submit" class="btn red-btn flex-f">确定报名</button>
+</view>
+<view class="co__submit-bar" wx:elif="{{ progressIndex == 0 && applyIndex == 1 }}">
+  <navigator url="/pages/center/myApply/myApply" open-type="redirect" class="btn red-btn flex-f">查看我的报名信息</navigator>
+</view>
+<view class="co__submit-bar" wx:elif="{{ canCancel }}">
+  <view class="text state-text flex-f">报名状态：{{ applyState }}</view>
+  <view class="btn red-btn" bindtap="cancelOrder">取消预约</view>
+</view>
+</form>
+</block>

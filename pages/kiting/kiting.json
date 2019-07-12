@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "消费",
+  "usingComponents": {
+    "coTitle": "/modules/coTitle/coTitle"
+  }
+}

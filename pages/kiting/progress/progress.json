@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "消费",
+  "usingComponents": {
+    "coTitle": "/modules/coTitle/coTitle",
+    "progress": "/modules/progress/progress"
+  }
+}

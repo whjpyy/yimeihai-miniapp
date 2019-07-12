@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "个人中心",
+  "usingComponents": {
+    "authDialog": "/modules/authDialog/authDialog",
+    "footerMenu": "/modules/footerMenu/footerMenu",
+    "van-icon":"/miniprogram_npm/vant-weapp/icon/index",
+    "van-button": "/miniprogram_npm/vant-weapp/button/index"
+  }
+}

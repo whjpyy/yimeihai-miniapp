@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "学分",
+  "usingComponents": {
+    "authDialog": "/modules/authDialog/authDialog",
+    "footerMenu": "/modules/footerMenu/footerMenu",
+    "coTitle": "/modules/coTitle/coTitle",
+    "empty": "/modules/empty/empty"
+  }
+}

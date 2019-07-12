@@ -1,0 +1,61 @@
+<!--pages/center/myOrder/detail/detail.wxml-->
+<view class="section infos">
+  <coTitle mainTitle="推荐人信息" showMore="{{ false }}" />
+  <view class="co__form items">
+    <view class="item">
+      <text>头像</text>
+      <view>
+        <image src="/assets/ico_default_head.png" class="head"></image>
+      </view>
+    </view>
+    <view class="item">
+      <text>昵称</text>
+      <view>Mis Emma</view>
+    </view>
+    <view class="item">
+      <text>注册手机号</text>
+      <view>125****5656</view>
+    </view>
+    <view class="item">
+      <text>会员等级</text>
+      <view>大众会员</view>
+    </view>
+    <view class="item">
+      <text>用户ID</text>
+      <view>150670XXXXX</view>
+    </view>
+    <view class="item">
+      <text>注册时间</text>
+      <view>2019-01-21 12：14：56</view>
+    </view>
+    <view class="item">
+      <text>支付方式</text>
+      <view>微信支付</view>
+    </view>
+  </view>
+</view>
+<view class="section goods" style='display:none'>
+  <coTitle mainTitle="购买物品" showMore="{{ false }}" />
+  <view class="card">
+    <image src="/assets/bg_card_x.jpg" class="bg"></image>
+    <view class="detail">
+      <view class="name">活动名称</view>
+      <view class="period">有效期：一年</view>
+      <view class="code">特惠价：￥999</view>
+      <view class="lab">注：支付后不予退款</view>
+    </view>
+  </view>
+</view>
+<view class="section others">
+  <coTitle mainTitle="其他信息" showMore="{{ false }}" />
+  <view class="co__remark">
+    <view>联系电话：028-123444</view>
+    <view>订单号：xxxxxx</view>
+    <view>创建时间：2018-12-07  11：02：02</view>
+    <view>支付时间：2018-12-07  11：02：02</view>
+    <view>支付方式：已支付</view>
+    <view>订单号：xxxxxx</view>
+    <view>交易流水：xxxxxxx</view>
+  </view>
+</view>
+

@@ -1,0 +1,5 @@
+<!--pages/caseDetail/caseDetail.wxml-->
+<view class="detail">
+  <image src="{{ content }}" style="height:{{ detailImgHeight }}" bindload="detailImgLoad" lazy-load="true"></image>
+</view>
+<bottomOut showBar="{{ showBottomOut }}" />

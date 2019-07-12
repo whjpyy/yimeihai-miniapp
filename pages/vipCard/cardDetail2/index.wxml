@@ -1,0 +1,7 @@
+<!--pages/vipCard/cardDetail2/index.wxml-->
+<image bindload='imageLoad' style="min-height:{{ detailImgHeight }}rpx" lazy-load="true" src='https://meidaplus.oss-cn-hangzhou.aliyuncs.com/meidaplus/assets/vip_privilege_imgInfo.jpg'></image>
+<bottomOut showBar="{{ showBottomOut }}" />
+<view class="co__submit-bar">
+  <view class="text price">￥{{ price }}</view>
+  <view class="btn red-btn" bindtap="orderBuy">立即购买</view>
+</view>

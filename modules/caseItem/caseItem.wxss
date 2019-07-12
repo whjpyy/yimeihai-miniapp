@@ -1,0 +1,87 @@
+.case-box {
+  width: 691rpx;
+  margin: 0 auto;
+  box-shadow: 0 4rpx 18rpx rgba(94, 94, 94, 0.31);
+}
+
+.case-box .item {
+  display: flex;
+}
+
+.case-box image {
+  width: 340rpx;
+  height: 300rpx;
+}
+
+.case-box .absolute_icon {
+  position: absolute;
+  font-size: 28rpx;
+  color: #fff;
+  margin-top: -50rpx;
+  margin-left: -10rpx;
+}
+
+.case-box .absolute_icon text {
+  position: absolute;
+  margin-top: -47rpx;
+  margin-left: 14rpx;
+}
+.case-box .absolute_icon.after text {
+  margin-left: 12rpx;
+}
+
+.case-box .absolute_icon image {
+  width: 124rpx;
+  height: 46rpx;
+  opacity: 0.8;
+}
+
+.case-box .before {
+  margin-right: 10rpx;
+}
+
+.case-box .text {
+  padding: 30rpx 24rpx 36rpx;
+}
+
+.case-box .xm {
+  display: flex;
+  font-size: 26rpx;
+  color: #757575;
+}
+.case-box .xm text{
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.case-box .title {
+  color: #3f3f3f;
+}
+
+.case-box .people {
+  display: flex;
+  font-size: 24rpx;
+  margin-top: 34rpx;
+}
+
+.people .row {
+  flex: 1;
+  vertical-align: middle;
+}
+
+.people .row .val {
+  color: #757575;
+}
+
+.people .btn {
+  display: inline-block;
+  font-size: 22rpx;
+  color: #35a1c3;
+  border: 2rpx solid #35a1c3;
+  line-height: 36rpx;
+  padding: 0 24rpx;
+  border-radius: 18rpx;
+}

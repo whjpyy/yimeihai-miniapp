@@ -1,0 +1,59 @@
+/* pages/kiting/kiting.wxss */
+@import '/modules/common/style/form.wxss';
+@import '/modules/common/style/submitBar.wxss';
+
+.kiting {
+  height:389rpx;
+  line-height: 1.15;
+  background:rgba(255,255,255,1);
+  box-shadow:0px 3rpx 16rpx 0rpx #5e5e5e4f;
+  border-radius:30rpx 30rpx 0rpx 0rpx;
+  margin-top: 35rpx;
+  padding: 0 25rpx;
+}
+.kiting .top .t {
+  font-size:28rpx;
+  font-weight:500;
+  color:rgba(124,131,141,1);
+  padding: 45rpx 0;
+}
+.kiting .top navigator {
+  font-size:28rpx;
+  font-weight:bold;
+  color:rgba(255,68,68,1);
+  padding: 40rpx 0;
+}
+.kiting .amount {
+  border-bottom: rgba(228,228,238,1) solid 1rpx;
+}
+.kiting .amount .tag {
+  font-size:52rpx;
+  font-weight:500;
+  color:rgba(18,25,34,1);
+  margin-right: 30rpx;
+}
+.kiting .amount input {
+  font-size:52rpx;
+  font-weight:400;
+  color:rgba(18,25,34,1);
+  height: 120rpx;
+}
+.kiting .amount .placeholder {
+  font-size:42rpx;
+  color:rgb(197, 197, 197);
+}
+.kiting .bottom {
+  margin-top: 80rpx;
+}
+.kiting .bottom text {
+  font-size:28rpx;
+  font-weight:500;
+  color:rgba(255,82,82,1);
+}
+
+.infos {
+  margin-top: 20rpx;
+}
+.infos .item:last-child {
+  border-bottom: rgba(211, 211, 211, .33) solid 1rpx;
+}

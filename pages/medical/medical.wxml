@@ -1,0 +1,8 @@
+<block wx:if="{{ dataLoaded }}">
+<view class="medical">
+  <block wx:for="{{ medical }}" wx:key="{{ index }}">
+    <medicalItem infos="{{ item }}" bottomLine="{{ index !== total - 1 }}" />
+  </block>
+</view>
+<bottomOut showBar="{{ showBottomOut }}" topMargin="{{ false }}" />
+</block>

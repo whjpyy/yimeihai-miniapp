@@ -1,0 +1,11 @@
+<view class="m-item {{ firstPaddingTop }} {{ lastBorderBottom }}" bindtap="jumpLink">
+  <image src="{{ infos.logo }}"></image>
+  <view class="m-infos">
+    <view class="name">{{ infos.name }}</view>
+    <view class="area">{{ infos.areaText }}</view>
+    <view class="addr">{{ infos.address }}</view>
+    <view class="tel">
+      <view class="tel-box"><image src="/assets/ico_tel_orange.png"></image>{{ infos.telephone }}</view>
+    </view>
+  </view>
+</view>

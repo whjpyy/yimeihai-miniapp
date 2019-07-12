@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "我的卡包",
+  "usingComponents": {
+    "authDialog": "/modules/authDialog/authDialog",
+    "footerMenu": "/modules/footerMenu/footerMenu",
+    "van-popup": "/miniprogram_npm/vant-weapp/popup/index",
+    "van-picker": "/miniprogram_npm/vant-weapp/picker/index",
+    "empty": "/modules/empty/empty",
+    "my-tab": "/modules/tab/index"
+  }
+}

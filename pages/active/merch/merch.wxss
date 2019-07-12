@@ -1,0 +1,12 @@
+/* pages/cardPackage/merch/merch.wxss */
+@import '/modules/common/style/submitBar.wxss';
+@import '/modules/common/style/card.wxss';
+
+.merchs .check image {
+  width:64rpx;
+  height:64rpx;
+}
+.merchs .box {
+  border-bottom: rgba(211, 211, 211, .33) solid 1rpx;
+  padding: 25rpx 0;
+}

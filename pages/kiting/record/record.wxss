@@ -1,0 +1,52 @@
+/* pages/kiting/record/record.wxss */
+@import '/modules/common/style/integral.wxss';
+
+.top {
+  width: 100%;
+  height:405rpx;
+  background:linear-gradient(0deg,rgba(255,113,108,1) 0%,rgba(255,125,91,1) 100%);
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.top .title {
+  margin-top: 85rpx;
+  font-size:28rpx;
+  font-weight:500;
+  color:rgba(255,255,255,.6);
+  text-align: center;
+}
+.top .integral {
+  font-size:54rpx;
+  font-weight:bold;
+  color:rgba(255,255,255,1);
+  margin-top: 22rpx;
+}
+
+page {
+  padding-top: 310rpx;
+}
+.record {
+  background-color: #fff;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  padding-top: 15rpx;
+  position: relative;
+  z-index: 2;
+}
+.record .nums text {
+  font-size:30rpx;
+  font-weight:bold;
+  color:rgba(50,50,50,1);
+  display: inline-block;
+  vertical-align: middle;
+}
+.record .nums image {
+  width:30rpx;
+  height:51rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 35rpx;
+}

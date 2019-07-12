@@ -1,0 +1,6 @@
+<tabbar active="{{ active }}">
+  <tabbarItem icon="/assets/ico_menu_main.png" text="首页" url="/pages/index/index" />
+  <tabbarItem icon="/assets/ico_menu_credits.png" text="学分" url="/pages/integral/integral" />
+  <tabbarItem icon="/assets/ico_menu_cards.png" text="我的卡包" url="/pages/cardPackage/cardPackage" />
+  <tabbarItem icon="/assets/ico_menu_mine.png" text="个人中心" url="/pages/center/center" />
+</tabbar>

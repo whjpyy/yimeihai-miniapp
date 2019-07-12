@@ -1,0 +1,124 @@
+<!--pages/cardPackage/detail/detail.wxml-->
+<block wx:if="{{ dataLoaded }}">
+<view class="top">
+  <image src="/assets/bg_card_x.jpg" class="bg"></image>
+  <view class="detail">
+    <view class="name">{{ consumptionCardName }}</view>
+    <view class="period">{{ validate }}</view>
+    <view class="code">{{ verifyCode }}</view>
+    <view class="lab">核销码</view>
+  </view>
+</view>
+<view class="content content-bottom" wx:if="{{ state == 0 }}">
+  <view class="section" wx:if="{{ serviceCategoryList.length > 0 }}">
+    <coTitle mainTitle="支持服务" showMore="{{ false }}" />
+    <view class="items">
+      <block wx:for="{{ serviceCategoryList }}" wx:key="{{ index }}">
+        <navigator url="/pages/serveDetail/serveDetail?id={{ item.id }}" class="flex-hcb">
+          <text>{{ item.name }}</text>
+          <image src="/assets/ico_link_arrow_right.png" class="link-ico-01"></image>
+        </navigator>
+      </block>
+    </view>
+  </view>
+  <view class="section section-line" wx:if="{{ shopList.length > 0 }}">
+    <coTitle mainTitle="支持商家" showMore="{{ false }}" />
+    <view class="merchs">
+      <block wx:for="{{ shopList }}" wx:key="{{ index }}">
+        <navigator url="/pages/orgDetail/orgDetail?id={{ item.id }}" class="flex-vc">
+          <image src="{{ item.logo }}"></image>
+          <view class="flex-f flex-vb infos">
+            <view class="name">{{ item.name }}</view>
+            <view class="area">{{ item.areaText }}</view>
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+  <view class="section">
+    <coTitle mainTitle="其他信息" showMore="{{ false }}" />
+    <view class="co__remark rules">
+      <view>获取方式：{{ modeDesc }}</view>
+      <view>使用方式：{{ transactionTypeDesc }}</view>
+      <view>获取时间：{{ createTime }}</view>
+    </view>
+  </view>
+  <view class="section to-other" wx:if="{{ mode == 2 && alienatorId }}">
+    <coTitle mainTitle="转让赠送人信息" showMore="{{ false }}" />
+    <view class="co__form items">
+      <view class="item">
+        <text>手机号：</text>
+        <view>{{ alienatorMobile }}</view>
+      </view>
+      <view class="item">
+        <text>用户ID：</text>
+        <view>{{ alienatorCode }}</view>
+      </view>
+    </view>
+  </view>
+  <view class="section">
+    <coTitle mainTitle="使用规则" showMore="{{ false }}" />
+    <view class="co__remark rules">
+      <block wx:for="{{ rule }}" wx:key="{{ index }}">
+        <view class="li">{{ item }}</view>
+      </block>
+    </view>
+  </view>
+</view>
+<view class="content {{ state == 2 ? 'content-bottom' : '' }}" wx:else>
+  <view class="section">
+    <coTitle mainTitle="获取信息" showMore="{{ false }}" />
+    <view class="co__remark">
+      <view>获取时间：{{ createTime }}</view>
+      <view>获取方式：{{ modeDesc }}</view>
+      <block wx:if="{{ mode == 2 && alienatorId }}">
+        <view>赠与人：{{ alienatorMobile }}</view>
+        <view>赠与ID：{{ alienatorCode }}</view>
+      </block>
+    </view>
+  </view>
+  <view class="section" wx:if="{{ state == 2 }}">
+    <coTitle mainTitle="预约信息" showMore="{{ false }}" />
+    <view class="co__remark">
+      <view>申请时间：{{ bookingTime }}</view>
+      <view>预约项目：{{ bookingItemName }}</view>
+      <view>预约商家：{{ bookingShopName }}</view>
+      <view>预计上门时间：{{ bookingVisitTime }}</view>
+    </view>
+  </view>
+  <view class="section" wx:if="{{ state == 1 }}">
+    <coTitle mainTitle="转让信息" showMore="{{ false }}" />
+    <view class="co__remark">
+      <view>转让时间：{{ editTime }}</view>
+      <view>赠与人手机号：{{ alienatorMobile }}</view>
+      <view>赠与人ID：{{ alienatorCode }}</view>
+    </view>
+  </view>
+  <block wx:if="{{ state == 3 }}">
+    <view class="section">
+      <coTitle mainTitle="预约信息" showMore="{{ false }}" />
+      <view class="co__remark">
+        <view>申请时间：{{ bookingTime }}</view>
+        <view>预约项目：{{ bookingItemName }}</view>
+        <view>预约商家：{{ bookingShopName }}</view>
+        <view>预计上门时间：{{ bookingVisitTime }}</view>
+      </view>
+    </view>
+    <view class="section">
+      <coTitle mainTitle="消费信息" showMore="{{ false }}" />
+      <view class="co__remark">
+        <view>消费项目：{{ verifyItemName }}</view>
+        <view>消费商家：{{ verifyShopName }}</view>
+        <view>消费时间：{{ verifyTime }}</view>
+      </view>
+    </view>
+  </block>
+</view>
+<view class="co__submit-bar" wx:if="{{ state == 0 }}">
+  <navigator url="/pages/cardPackage/transfer/transfer?cardId={{cardId}}&cardName={{consumptionCardName}}" open-type="redirect" class="btn orange-btn flex-f" wx:if="{{ canTransfer }}">转让赠送</navigator>
+  <navigator url="/pages/cardPackage/order/order?cardId={{cardId}}" open-type="redirect" class="btn red-btn flex-f" wx:if="{{ canUse }}">预约消费</navigator>
+</view>
+<view class="co__submit-bar" wx:elif="{{ state == 2 }}">
+  <view class="btn red-btn flex-f" bindtap="cancelBooking">取消预约</view>
+</view>
+</block>

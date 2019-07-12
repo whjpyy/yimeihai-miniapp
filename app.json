@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/medical/medical",
+    "pages/orgDetail/orgDetail",
+    "pages/case/case",
+    "pages/caseDetail/caseDetail",
+    "pages/serveItem/serveItem",
+    "pages/serveDetail/serveDetail",
+    "pages/vipCard/vipCard",
+    "pages/vipCard/cardDetail/cardDetail",
+    "pages/order/order",
+    "pages/integral/integral",
+    "pages/integral/record/record",
+    "pages/kiting/kiting",
+    "pages/kiting/record/record",
+    "pages/kiting/progress/progress",
+    "pages/cardPackage/cardPackage",
+    "pages/cardPackage/detail/detail",
+    "pages/cardPackage/order/order",
+    "pages/cardPackage/merch/merch",
+    "pages/cardPackage/transfer/transfer",
+    "pages/cardPackage/success/success",
+    "pages/center/center",
+    "pages/center/myTeam/myTeam",
+    "pages/center/myTeam/detail/detail",
+    "pages/center/myApply/myApply",
+    "pages/center/myOrder/myOrder",
+    "pages/center/myOrder/detail/detail",
+    "pages/center/myAseo/myAseo",
+    "pages/center/myAseo/record/record",
+    "pages/active/active",
+    "pages/active/progress/progress",
+    "pages/active/merch/merch",
+    "pages/external/external",
+    "pages/invitation/invitation",
+    "pages/vipCard/cardDetail2/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "美达Plus",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

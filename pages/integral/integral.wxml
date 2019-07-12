@@ -1,0 +1,42 @@
+<!--pages/integral/integral.wxml-->
+<block wx:if="{{ dataLoaded }}">
+  <view class="top">
+    <view class="title">学分</view>
+    <view class="integral">{{ amount }}</view>
+    <view class="btn">
+      <navigator url="/pages/kiting/kiting">去消费</navigator>
+      <navigator style='margin-left:10rpx' url="/pages/kiting/record/record">消费历史</navigator>
+    </view>
+  </view>
+  <view class="detail">
+    <block wx:if="{{items.length}}">
+      <coTitle mainTitle="学习明细详情" showMore="{{ false }}" />
+      <view class="list">
+        <block wx:for="{{ items }}" wx:key="{{ index }}">
+          <view class="flex-s li">
+            <navigator url="/pages/integral/record/record?id={{item.id}}" class="flex-f">
+              <view class="validity">{{ item.validate }}</view>
+              <view class="content">
+                <text wx:if="{{item.remark === '报名活动返利'}}">报名活动获得</text>
+                <text wx:else>{{item.remark}}</text>
+              </view>
+              <view class="return-cash">
+                <view class="should">应获得：<text>{{ item.shouldAmount }}</text></view>
+                <view class="finish">已获得：<text>{{ item.alreadyAmount }}</text></view>
+                <view class="surplus">剩余：<text>{{ item.surplusAmount }}</text></view>
+              </view>
+              <!-- <view class="condition">
+                <text class="yellow">需每日签到</text>
+              </view> -->
+            </navigator>
+          </view>
+        </block>
+      </view>
+    </block>
+    <empty tips="抱歉，您还没有返学分记录" class="empty" wx:else />
+  </view>
+</block>
+<!-- 底部菜单 -->
+<footerMenu active="1" />
+<!-- 授权弹窗 -->
+<authDialog bind:authover="onAuthOver" />

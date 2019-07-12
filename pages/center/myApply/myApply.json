@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "我的报名",
+  "usingComponents": {
+    "authDialog": "/modules/authDialog/authDialog",
+    "van-popup": "/miniprogram_npm/vant-weapp/popup/index",
+    "van-picker": "/miniprogram_npm/vant-weapp/picker/index",
+    "empty": "/modules/empty/empty",
+    "my-tab": "/modules/tab/index"
+  }
+}

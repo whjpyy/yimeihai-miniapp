@@ -1,0 +1,120 @@
+/* banner */
+.banner {
+  width: 100%;
+  height: 435rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.banner image {
+  width: 100%;
+  height: 100%;
+}
+.banner .wx-swiper-dots {
+  top: 325rpx;
+}
+.banner .wx-swiper-dot{
+    width:12rpx;
+    height: 12rpx; 
+    display: inline-flex;
+    justify-content: space-between;
+}
+.banner .wx-swiper-dot::before{
+    content: '';
+    flex-grow: 1;  
+    background: rgba(0,0,0,.3);
+    border-radius: 0;
+}
+.banner .wx-swiper-dot-active::before{
+    background:rgba(255,255,255,1);    
+}
+.wrapper {
+  padding-top: 360rpx;
+}
+/* 信息 */
+.infos {
+  min-height: 160rpx;
+  background-color: #fff;
+  box-shadow: 0 3rpx 30rpx rgba(94,94,94,.2);
+  width: 700rpx;
+  border-radius: 10rpx;
+  margin: 0 auto 15rpx;
+  padding: 35rpx 30rpx 0;
+  position: relative;
+  z-index: 2;
+}
+.infos .name {
+  color: #030303;
+  font-size: 32rpx;
+  line-height: 50rpx;
+}
+.infos .tel {
+  padding: 35rpx 0;
+  border-bottom: #d3d3d3 solid 1rpx;
+}
+.infos .tel:last-child {
+  border-bottom: none;
+}
+.infos .tel .icon, .infos .addr .icon {
+  width: 35rpx;
+  height: 45rpx;
+  margin-right: 15rpx;
+}
+.infos .tel .icon image {
+  width: 33rpx;
+  height: 33rpx;
+  position: relative;
+  top: 3rpx;
+}
+.infos .tel .number {
+  color: #141414;
+  font-size: 28rpx;
+}
+.infos .tel .btn {
+  background-color: #f9a741;
+  border-radius: 4rpx;
+  width: 155rpx;
+  line-height: 45rpx;
+  color: #ffffff;
+  font-size: 27rpx;
+  text-align: center;
+}
+.infos .tel .link {
+  width: 10rpx;
+  height: 18rpx;
+  margin-left: 25rpx;
+}
+.infos .addr {
+  padding: 35rpx 0;
+}
+.infos .addr .icon image {
+  width: 27rpx;
+  height: 36rpx;
+}
+.infos .addr .area {
+  color: #141414;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.infos .addr .dt {
+  color: #525252;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  padding-top: 10rpx;
+}
+/* 介绍 */
+.intro .detail {
+  width: 700rpx;
+  margin: 0 auto;
+}
+.intro .detail view {
+  color: #383838;
+  font-size: 30rpx;
+  text-align: justify;
+  word-break: break-all;
+  line-height: 40rpx;
+}
+.intro .detail image {
+  width: 100%;
+}

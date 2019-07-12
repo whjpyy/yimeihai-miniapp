@@ -1,0 +1,98 @@
+/* pages/invitation/invitation.wxss */
+@import '/modules/common/style/remark.wxss';
+
+.header {
+  background:rgba(231,74,69,1);
+  height: 394rpx;
+  padding: 35rpx;
+  position: relative;
+}
+.header .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.header .h-infos {
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+.header .head {
+  width:150rpx;
+  height:150rpx;
+  margin: 0 auto;
+  border:8rpx solid rgba(255, 255, 255, 0.6);
+  border-radius:50%;
+}
+.header .nickname {
+  font-size:30rpx;
+  font-weight:bold;
+  color:rgba(255,255,255,1);
+  line-height:40rpx;
+  text-align: center;
+  margin-top: 35rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.header .infos {
+  font-size:26rpx;
+  font-weight:bold;
+  color:rgba(255,255,255,1);
+  line-height:40rpx;
+  margin-top: 40rpx;
+}
+.header .vip {
+  height:40rpx;
+  background:rgba(255,255,255,.33);
+  box-shadow:0rpx 3rpx 7rpx 0rpx rgba(51,227,221,0.43);
+  border-top-left-radius:20rpx;
+  border-bottom-left-radius:20rpx;
+  padding: 0 10rpx;
+  position: absolute;
+  right: 0;
+  top: 70rpx;
+  z-index: 3;
+}
+.header .vip image {
+  width:35rpx;
+  height:27rpx;
+  margin-right: 6rpx;
+}
+.header .vip text {
+  font-size:24rpx;
+  font-weight:800;
+  color:rgba(255,255,255,1);
+}
+
+.items {
+  width: 700rpx;
+  margin: 0 auto;
+}
+.items .item {
+  height: 100rpx;
+  border-bottom: rgba(211, 211, 211, .33) solid 1rpx;
+}
+.items .ico {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 20rpx;
+}
+.items .t {
+  font-size:28rpx;
+  font-weight:500;
+  color:rgba(102,102,102,1);
+}
+.items .cnt {
+  font-size:28rpx;
+  font-weight:500;
+  color:rgba(231, 74, 69, 1);
+}
+.items .link {
+  width:13rpx;
+  height:23rpx;
+  margin-left: 16rpx;
+}

@@ -1,0 +1,20 @@
+<!--pages/center/myAseo/record/record.wxml-->
+<block wx:if="{{ dataLoaded }}">
+<view class="items" wx:if="{{ records.length }}">
+  <block wx:for="{{ records }}" wx:key="{{ index }}">
+    <view class="item">
+      <view class="flex-vc">
+        <image src="{{ item.icon }}"></image>
+        <view class="flex-f infos">
+          <view class="nick">{{ item.name }}</view>
+          <view class="flex-hcb bottom-bar">
+            <view class="tel">{{ item.mobile }}</view>
+            <view class="date">{{ item.createTime }}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+<empty tips="抱歉，暂无推广记录~" wx:else />
+</block>

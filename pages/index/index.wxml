@@ -1,0 +1,92 @@
+<block wx:if="{{ dataLoaded }}">
+<!-- banner -->
+<swiper class="banner" indicator-dots="true" autoplay="true" circular="true">
+  <block wx:for="{{ banner }}" wx:key="{{ index }}">
+    <swiper-item>
+      <image src="{{ item.picture }}" data-url="{{ item.href }}" bindtap="jumpLink"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 菜单 -->
+<view class="menu flex-vc">
+  <view class="menu-item flex-f" data-url="/pages/medical/medical" bindtap="jumpLink" wx:if="{{shopVisible}}">
+    <view class="box">
+      <image src="/assets/ico_medical_org.png" class="menu-icon"></image>
+      <text class="menu-text">医疗机构</text>
+    </view>
+  </view>
+  <view class="menu-item flex-f" data-url="/pages/case/case" bindtap="jumpLink">
+    <view class="box">
+      <image src="/assets/ico_real_case.png" class="menu-icon"></image>
+      <text class="menu-text">真人案例</text>
+    </view>
+  </view>
+  <view class="menu-item flex-f">
+    <view class="box">
+      <image src="/assets/ico_credits_store.png" class="menu-icon"></image>
+      <image src="/assets/ico_wait.png" class="menu-tag"></image>
+      <text class="menu-text">学分商城</text>
+    </view>
+  </view>
+</view>
+<!-- 图片 -->
+<view class="active" wx:if="{{active.length}}">
+  <view class="active-title"><image src="/assets/active_title.png"></image></view>
+  <!-- <swiper class="active-items" display-multiple-items="1.29" wx:if="{{ active.length > 1 }}">
+    <block wx:for="{{ active }}" wx:key="{{ index }}">
+      <swiper-item>
+        <image src="{{ item.image }}" data-url="{{ item.url }}" bindtap="jumpLink"></image>
+      </swiper-item>
+    </block>
+  </swiper> -->
+    <!-- <view class="active-items" wx:for="{{ active }}" wx:key="{{ index }}">
+      <image src="{{ item.image }}" data-url="{{ item.url }}" bindtap="jumpLink"></image>
+    </view> -->
+    <view class='activity-row'>
+      <view wx:for="{{ active }}" wx:key="{{ index }}">
+        <image src="{{ item.image }}" data-url="{{ item.url }}" bindtap="jumpLink"></image>
+      </view>
+    </view>
+</view>
+<!-- 服务项目 -->
+<view class="serve" wx:if="{{serviceCategory.length}}">
+  <coTitle mainTitle="服务项目" subTitle="All Product" url="/pages/serveItem/serveItem" />
+  <swiper class="serve-items" display-multiple-items="2.5" previous-margin="15rpx" next-margin="15rpx">
+    <block wx:for="{{ serviceCategory }}" wx:key="{{ index }}">
+      <swiper-item>
+        <view class="serve-item" data-url="/pages/serveDetail/serveDetail?id={{item.id}}" bindtap="jumpLink">
+          <image class="flex-f" mode="aspectFill" src="{{ item.logo }}"></image>
+          <view class="name">{{ item.name }}</view>
+          <view class="tags">
+            <text>{{ item.intro || item.remark }}</text>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- 医疗机构 -->
+<view class="medical" wx:if="{{shop.length && shopVisible}}">
+  <coTitle mainTitle="{{!shopVisible ? '服务商家' : '医疗机构'}}" subTitle="{{!shopVisible ? 'Service business' : 'Medical Institution'}}" url="/pages/medical/medical" />
+  <view class="m-items">
+    <block wx:for="{{ shop }}" wx:key="{{ index }}">
+      <medicalItem infos="{{ item }}" topMargin="{{ index }}" bottomLine="{{ index !== shop.length - 1 }}" />
+    </block>
+  </view>
+</view>
+<!-- 案例 -->
+<view class="case" wx:if="{{realCase.length}}">
+  <coTitle mainTitle="真人案例" subTitle="Real case" url="/pages/case/case" />
+  <swiper class="case-items" indicator-dots="true" circular="true" previous-margin="20rpx" next-margin="20rpx">
+    <block wx:for="{{ realCase }}" wx:key="{{ index }}">
+      <swiper-item class="case-item">
+        <caseItem infos="{{ item }}" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+</block>
+<!-- 底部菜单 -->
+<footerMenu active="0" />
+<!-- 授权弹窗 -->
+<authDialog bind:authover="onAuthOver" />

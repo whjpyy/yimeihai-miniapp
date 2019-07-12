@@ -1,0 +1,31 @@
+/* pages/kiting/progress/progress.wxss */
+@import '/modules/common/style/submitBar.wxss';
+@import '/modules/common/style/remark.wxss';
+
+.success {
+  height: 160rpx;
+  font-size:36rpx;
+  font-weight:bold;
+  color:rgba(54,54,54,1);
+}
+.success image {
+  width:64rpx;
+  height:64rpx;
+  margin-right: 30rpx;
+}
+
+.infos {
+  background:rgba(255,255,255,1);
+  box-shadow:0px 0px 10rpx 0px rgba(0, 0, 0, 0.1);
+  border-radius:20rpx;
+  padding-bottom: 40rpx;
+  position: relative;
+  top: -15rpx;
+}
+
+.co__remark .red {
+  color: rgba(255, 68, 68, 1);
+}
+.co__remark .bold {
+  font-weight:bold;
+}

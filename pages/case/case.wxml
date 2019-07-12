@@ -1,0 +1,11 @@
+<block wx:if="{{ dataLoaded }}">
+  <block wx:if="{{ list.length }}">
+    <block wx:for="{{ list }}" wx:key="{{ index }}">
+      <view class="case-item">
+        <caseItem infos="{{ item }}" />
+      </view>
+    </block>
+  </block>
+  <empty tips="抱歉，暂无案例~" wx:else />
+  <bottomOut showBar="{{ showBottomOut }}" />
+</block>

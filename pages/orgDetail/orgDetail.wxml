@@ -1,0 +1,50 @@
+<block wx:if="{{ dataLoaded }}">
+<!-- banner -->
+<swiper class="banner" indicator-dots="true" autoplay="true" circular="true">
+  <block wx:for="{{ shopPictureList }}" wx:key="{{ index }}">
+    <swiper-item>
+      <image src="{{ item.url }}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="wrapper">
+  <!-- 信息 -->
+  <view class="infos">
+    <view class="name">{{ name }}</view>
+    <block wx:for="{{ telephone }}" wx:key="{{ index }}">
+      <view class="tel flex-vc">
+        <view class="icon flex-c"><image src="/assets/ico_tel_yellow.png"></image></view>
+        <text class="number flex-f">{{ item }}</text>
+        <view class="btn" data-tel="{{ item }}" bindtap="makeCall">点击拨打</view>
+        <image src="/assets/ico_arrow_right.png" class="link"></image>
+      </view>
+    </block>
+    <view class="addr flex-s">
+      <view class="icon flex-c"><image src="/assets/ico_addr_yellow.png"></image></view>
+      <view class="flex-f">
+        <view class="area">{{ areaText }}</view>
+        <view class="dt">{{ address }}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 案例 -->
+  <view class="case" wx:if="{{cases}}">
+    <coTitle mainTitle="医院案例" showMore="{{ false }}" />
+    <swiper class="case-items" indicator-dots="true" circular="true" previous-margin="20rpx" next-margin="20rpx">
+      <block wx:for="{{ cases }}" wx:key="{{ index }}">
+        <swiper-item class="case-item">
+          <caseItem infos="{{ item }}" data-url="/pages/caseDetail/caseDetail" bindtap="jumpLink" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 介绍 -->
+  <view class="intro">
+    <coTitle mainTitle="机构介绍" showMore="{{ false }}" />
+    <view class="detail" wx:if="{{ content }}">
+      <image src="{{ content }}" style="height:{{ detailImgHeight }}" bindload="detailImgLoad" lazy-load="true"></image>
+    </view>
+  </view>
+</view>
+<bottomOut showBar="{{ showBottomOut }}" />
+</block>

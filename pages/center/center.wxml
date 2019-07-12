@@ -1,0 +1,63 @@
+<!--pages/center/center.wxml-->
+<view class="header">
+  <image src="/assets/bg_center_header.jpg" class="bg"></image>
+  <view class="h-infos">
+    <image src="{{ icon }}" class="head"></image>
+    <view class="nickname">
+      <text>{{ fullName }}</text>
+      <!-- <van-button type='default' style='padding-left:10rpx' size="mini" round>
+        <van-icon name="replay" /></van-button> -->
+    </view>
+    <view class='btns'>
+      <view class="code">
+        <text>邀请码：{{ invitationCode }}</text>
+      </view>
+      <view class="code" style='margin-left:10rpx' bindtap='onUpdata'>
+        <button plain style='height:auto;line-height:54rpx;color:#fff;border:2rpx solid #fff;font-size:24rpx' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">更新用户信息</button>
+      </view>
+    </view>
+  </view>
+  <view class="flex-vc vip">
+    <image src="/assets/ico_vip.png"></image>
+    <text>{{ memberLevelName }}</text>
+  </view>
+</view>
+<view class="flex-hcb infos">
+  <view class="box tel">注册手机号：
+    <text>{{ mobile }}</text>
+  </view>
+  <view class="box id">ID：
+    <text>{{ code }}</text>
+  </view>
+</view>
+<view class="items">
+  <navigator url="/pages/center/myAseo/myAseo" class="flex-vc item">
+    <image src="/assets/ico_code.png" class="ico"></image>
+    <text class="flex-f t">我的推广码</text>
+    <image src="/assets/ico_link_arrow_right_gray.png" class="link"></image>
+  </navigator>
+  <navigator url="/pages/center/myTeam/myTeam" class="flex-vc item">
+    <image src="/assets/ico_team.png" class="ico"></image>
+    <text class="flex-f t">我的团队</text>
+    <image src="/assets/ico_link_arrow_right_gray.png" class="link"></image>
+  </navigator>
+  <navigator url="/pages/center/myApply/myApply" class="flex-vc item">
+    <image src="/assets/ico_join.png" class="ico"></image>
+    <text class="flex-f t">我的报名</text>
+    <image src="/assets/ico_link_arrow_right_gray.png" class="link"></image>
+  </navigator>
+  <navigator url="/pages/center/myOrder/myOrder" class="flex-vc item" hidden="true">
+    <image src="/assets/ico_order.png" class="ico"></image>
+    <text class="flex-f t">我的订单</text>
+    <image src="/assets/ico_link_arrow_right_gray.png" class="link"></image>
+  </navigator>
+  <view class="flex-vc item" data-tel="{{telephone}}" bindtap="makeCall" wx:if="{{telephone}}">
+    <image src="/assets/ico_serve_call.png" class="ico"></image>
+    <text class="flex-f t">咨询电话</text>
+    <text class="cnt">{{telephone}}</text>
+    <image src="/assets/ico_link_arrow_right_gray.png" class="link"></image>
+  </view>
+</view>
+<footerMenu active="3" />
+<!-- 授权弹窗 -->
+<authDialog bind:authover="onAuthOver" />

@@ -1,0 +1,14 @@
+/* modules/tab/index.wxss */
+.tapall{
+  white-space:nowrap;
+}
+.tabitem{
+  font-size: 28rpx;
+  display: inline-block;
+  line-height: 84rpx;
+  padding: 0 10rpx;
+  margin: 0 30rpx;
+}
+.tabitem.active{
+  border-bottom:4rpx solid #f44
+}

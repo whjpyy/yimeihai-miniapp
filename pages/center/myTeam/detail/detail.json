@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "成员信息",
+  "usingComponents": {
+    "coTitle": "/modules/coTitle/coTitle",
+    "authDialog": "/modules/authDialog/authDialog",
+    "empty": "/modules/empty/empty"
+  }
+}

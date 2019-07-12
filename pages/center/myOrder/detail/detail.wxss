@@ -1,0 +1,73 @@
+/* pages/center/myOrder/detail/detail.wxss */
+@import '/modules/common/style/form.wxss';
+@import '/modules/common/style/remark.wxss';
+
+page {
+  padding-bottom: 30rpx;
+}
+.head {
+  border-radius:50%;
+  width:90rpx;
+  height:90rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.items .item:last-child {
+  border-bottom:rgba(211, 211, 211, .33) solid 1rpx;
+}
+
+.goods, .others {
+  margin-top: 30rpx;
+}
+.card {
+  width: 100%;
+  height: 370rpx;
+  position: relative;
+  margin-top: 20rpx;
+}
+.card .bg {
+  width: 100%;
+  height: 100%;
+}
+.card .detail {
+  width: 100%;
+  height: 100%;
+  padding: 50rpx 40rpx 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  line-height: 40rpx;
+}
+.card .name {
+  font-size:39rpx;
+  font-weight:800;
+  color:rgba(229,204,130,1);
+  text-align: center;
+  margin: 30rpx 50rpx 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.card .period {
+  font-size:26rpx;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  margin: 20rpx 50rpx 0;
+}
+.card .code {
+  font-size:40rpx;
+  font-weight:800;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  margin-top: 32rpx;
+}
+.card .lab {
+  font-size:24rpx;
+  font-weight:500;
+  color:rgba(175,174,174,1);
+  margin-top: 32rpx;
+  text-align: center;
+}

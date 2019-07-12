@@ -1,0 +1,47 @@
+<!--pages/cardPackage/order/order.wxml-->
+<view class="section">
+  <view class="co__form items">
+    <view class="item">
+      <text>预约项目：</text>
+      <view bindtap="picker">
+        <view class="link">
+          <text>{{ pickerValue }}</text>
+          <image src="/assets/ico_link_arrow_right.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="item">
+      <text>预约商家：</text>
+      <view>
+        <navigator url="/pages/cardPackage/merch/merch?cardId={{cardId}}">
+          <view class="link">
+            <text>{{ merchValue }}</text>
+            <image src="/assets/ico_link_arrow_right.png"></image>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="section date">
+  <view class="co__form items">
+    <view class="item">
+      <text>预约上门时间：</text>
+      <view bindtap="datePicker">
+        <view class="link">
+          <text>{{ datePickerValue }}</text>
+          <image src="/assets/ico_link_arrow_right.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="co__submit-bar">
+  <view class="btn red-btn flex-f" bindtap="submit">确认</view>
+</view>
+<van-popup show="{{ showPicker }}" position="bottom">
+  <van-picker show-toolbar="true" columns="{{ columns }}" bind:confirm="pickerConfirm" bind:cancel="pickerCancel" />
+</van-popup>
+<van-popup show="{{ showDatePicker }}" position="bottom">
+  <van-datetime-picker type="date" value="{{ currentDate }}" min-date="{{ minDate }}" bind:confirm="datePickerConfirm" bind:cancel="datePickerCancel" />
+</van-popup>

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "壹美嗨·美学设计院",
+  "usingComponents": {
+    "authDialog": "/modules/authDialog/authDialog",
+    "footerMenu": "/modules/footerMenu/footerMenu",
+    "medicalItem": "/modules/medicalItem/medicalItem",
+    "coTitle": "/modules/coTitle/coTitle",
+    "caseItem": "/modules/caseItem/caseItem"
+  }
+}

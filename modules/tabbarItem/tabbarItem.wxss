@@ -1,0 +1,35 @@
+:host{ 
+  flex:1; 
+}
+.footer-menu-item {
+  height: 100%;
+  padding: 20rpx 0 15rpx;
+  position: relative;
+}
+.footer-menu-icon {
+  width: 55rpx;
+  height: 55rpx;
+  margin: 0 auto;
+}
+.footer-menu-text {
+  display: block;
+  color: #000000;
+  font-size: 22rpx;
+  text-align: center;
+  padding-bottom: 15rpx;
+}
+.footer-menu-active-item .footer-menu-text {
+  color: #e58c3b;
+}
+.footer-menu-active-item:after {
+  content: '';
+  width: 50rpx;
+  height: 5rpx;
+  border-radius: 5rpx;
+  background-color: rgba(0,0,0,.7);
+  position: absolute;
+  bottom: 20rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}

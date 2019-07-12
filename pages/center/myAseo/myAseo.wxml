@@ -1,0 +1,13 @@
+<!--pages/center/myAseo/myAseo.wxml-->
+<image src="/assets/bg_aseo.jpg" class="bg"></image>
+<view class="content" style='padding-top:{{margin_top}}'>
+  <view class="qr-code">
+    <view class="img">
+      <image bindtap='onClickImage' src="{{ qrCode }}"></image>
+    </view>
+    <text>邀请好友扫码，一起享受吧</text>
+  </view>
+</view>
+<navigator url="/pages/center/myAseo/record/record" class="record">我的推广记录</navigator>
+<!-- 授权弹窗 -->
+<authDialog bind:authover="onAuthOver" />

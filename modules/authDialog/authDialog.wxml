@@ -1,0 +1,12 @@
+<van-dialog 
+  lang="zh_CN" 
+  show="{{ showDialog }}" 
+  title="{{ title }}" 
+  message="{{ message }}" 
+  confirm-button-text="{{ confirmButtonText }}" 
+  show-cancel-button="{{ showCancelButton }}" 
+  confirm-button-open-type="{{ openType }}" 
+  bind:getuserinfo="{{ getUserInfo }}" 
+  bind:getphonenumber="{{ getPhoneNumber }}" 
+  bind:confirm="{{ confirm }}" 
+/>

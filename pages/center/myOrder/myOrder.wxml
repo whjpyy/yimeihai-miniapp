@@ -1,0 +1,17 @@
+<!--pages/center/myOrder/myOrder.wxml-->
+<view class="list">
+  <block wx:for="{{ list }}" wx:key="{{ index }}">
+    <view class="li">
+      <navigator url="/pages/center/myOrder/detail/detail" class="flex-vc">
+        <image src="/assets/ico_card_pack.png"></image>
+        <view class="infos">
+          <view class="name">订单号：{{ item.order }}</view>
+          <view class="validity">创建时间：{{ item.date }}</view>
+          <view class="state">支付状态：{{ item.state }}</view>
+        </view>
+      </navigator>
+    </view>
+  </block>
+</view>
+<!-- 授权弹窗 -->
+<authDialog bind:authover="onAuthOver" />

@@ -1,0 +1,10 @@
+/* pages/cardPackage/order/order.wxss */
+@import '/modules/common/style/submitBar.wxss';
+@import '/modules/common/style/form.wxss';
+
+.date {
+  border-top: rgba(249,249,249,1) solid 21rpx;
+}
+.date .item:last-child {
+  border-bottom: rgba(211, 211, 211, .33) solid 1rpx;
+}

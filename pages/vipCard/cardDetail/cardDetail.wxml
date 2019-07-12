@@ -1,0 +1,55 @@
+<!--pages/vipCard/cardDetail/cardDetail.wxml-->
+<block wx:if="{{ dataLoaded }}">
+<view class="top">
+  <image src="/assets/bg_card_detail.jpg" class="bg"></image>
+  <view class="detail">
+    <view class="name">{{ name }}</view>
+    <view class="period">{{ validate }}</view>
+    <view class="btn" bindtap="orderBuy">立即购买</view>
+    <view class="lab">注：支付后不予退款</view>
+    <view class="flex-hcb box">
+      <view class="cond">每人仅限购买一张</view>
+      <view class="price"><text class="t">特惠价：</text><text class="sign">￥</text>{{ price }}<text class="unit">元</text></view>
+    </view>
+  </view>
+</view>
+<view class="content">
+  <view class="section" wx:if="{{ serviceCategoryList.length > 0 }}">
+    <coTitle mainTitle="支持服务" showMore="{{ false }}" />
+    <view class="items">
+      <block wx:for="{{ serviceCategoryList }}" wx:key="{{ index }}">
+        <navigator url="/pages/serveDetail/serveDetail?id={{ item.id }}" class="flex-hcb">
+          <text>{{ item.name }}</text>
+          <image src="/assets/ico_link_arrow_right.png" class="link-ico-01"></image>
+        </navigator>
+      </block>
+    </view>
+  </view>
+  <view class="section section-line" wx:if="{{ shopList.length > 0 }}">
+    <coTitle mainTitle="支持商家" showMore="{{ false }}" />
+    <view class="merchs">
+      <block wx:for="{{ shopList }}" wx:key="{{ index }}">
+        <navigator url="/pages/orgDetail/orgDetail?id={{ item.id }}" class="flex-vc">
+          <image src="{{ item.logo }}"></image>
+          <view class="flex-f flex-vb infos">
+            <view class="name">{{ item.name }}</view>
+            <view class="area">{{ item.areaText }}</view>
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+  <view class="section section-line">
+    <coTitle mainTitle="使用规则" showMore="{{ false }}" />
+    <view class="co__remark rules">
+      <block wx:for="{{ rule }}" wx:key="{{ index }}">
+        <view class="li">{{ item }}</view>
+      </block>
+    </view>
+  </view>
+</view>
+<view class="co__submit-bar">
+  <view class="text price">￥{{ price }}</view>
+  <view class="btn red-btn" bindtap="orderBuy">立即购买</view>
+</view>
+</block>

@@ -1,0 +1,41 @@
+<!--pages/vipCard/vipCard.wxml-->
+<block wx:if="{{ dataLoaded }}">
+<block wx:if="{{ cards.length }}">
+  <view class="banner">
+    <image src="/assets/data/vip_privilege_img.jpg"></image>
+  </view>
+  <view bindtap="orderBuy" class="btnNow">立即购买</view>
+  <view class="list">
+    <block wx:for="{{ cards }}" wx:key="{{ index }}">
+      <view class="flex-vc item">
+        <view class="image">
+          <image src="{{ item.logo }}" mode="aspectFill"></image>
+          <view class="flex-c over-tag" wx:if="{{ item.surplusNumber == 0 }}">
+            <text>已抢光</text>
+          </view>
+        </view>
+        <view class="flex-f flex-vcb infos">
+          <view class="name">{{ item.name }}</view>
+          <view class="support">
+            <text>支持项目：</text>
+            <block wx:for="{{ item.serviceCategoryNames }}" wx:key="{{ index }}" wx:for-item="support">{{ support }}</block>
+          </view>
+          <view class="flex-vc box">
+            <view class="flex-f price {{ item.surplusNumber == 0 ? 'disable' : '' }}"><text class="sign">￥</text>{{ item.price }}<text class="unit">元</text></view>
+            <view class="btn" wx:if="{{ item.surplusNumber == 0 }}">
+              <image src="/assets/btn_get_over.png"></image>
+            </view>
+            <view class="btn" id="{{ item.id }}" bindtap="buy" wx:else>
+              <image src="/assets/btn_get_start.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</block>
+<empty tips="抱歉，暂无可购消费卡~" wx:else />
+<bottomOut showBar="{{ showBottomOut }}" topMargin="{{ false }}" />
+</block>
+<!-- 授权弹窗 -->
+<authDialog bind:authover="onAuthOver" />

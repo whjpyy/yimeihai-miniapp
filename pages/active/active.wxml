@@ -1,0 +1,43 @@
+<!--pages/active/active.wxml-->
+<block wx:if="{{ dataLoaded }}">
+<view class="banner">
+  <image src="/assets/data/active_banner_img.png"></image>
+</view>
+<view class="intro">
+  <view class="t">
+    <view class="flex-c title">
+      <view class="flex-vc">
+        <image src="/assets/ico_active_title.png" class="f"></image>
+        <text>豪礼奢宠·感恩回馈</text>
+        <image src="/assets/ico_active_title.png" class="e"></image>
+      </view>
+    </view>
+  </view>
+  <view class="img">
+    <image bindtap='onCallPhone' data-tel="17602865769" src="/assets/data/active_img.jpg"></image>
+  </view>
+</view>
+<!-- 支持医院 -->
+<view class="medical">
+  <coTitle mainTitle="支持医院" showMore="{{ false }}" />
+  <view class="m-items">
+    <block wx:for="{{ shops }}" wx:key="{{ index }}">
+      <medicalItem infos="{{ item }}" topMargin="{{ index }}" bottomLine="{{ index !== medical.length - 1 }}" />
+    </block>
+  </view>
+</view>
+<view class="use-rule">
+  <coTitle mainTitle="活动规则" showMore="{{ false }}" />
+  <view class="co__remark">
+    <block wx:for="{{rule}}" wx:key="{{index}}">
+      <view class="li">{{item}}</view>
+    </block>
+  </view>
+</view>
+<view class="co__submit-bar">
+  <navigator url="/pages/center/myApply/myApply" class="btn orange-btn flex-f">我的报名信息</navigator>
+  <view class="btn red-btn flex-f" bindtap="apply">立即报名</view>
+</view>
+</block>
+<!-- 授权弹窗 -->
+<authDialog bind:authover="onAuthOver" />

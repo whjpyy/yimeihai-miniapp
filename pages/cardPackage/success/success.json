@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "消费预约成功",
+  "usingComponents": {
+    "coTitle": "/modules/coTitle/coTitle"
+  }
+}

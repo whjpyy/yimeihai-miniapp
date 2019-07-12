@@ -1,0 +1,53 @@
+
+.co__form {
+  padding: 0 25rpx;
+}
+.co__form .item {
+  border-bottom: rgba(211, 211, 211, .33) solid 1rpx;
+  height: 110rpx;
+  display: flex;
+  align-items: center;
+}
+.co__form .item:last-child {
+  border-bottom: none;
+}
+.co__form .item text {
+  font-size:32rpx;
+  font-weight:500;
+  color:rgba(96,96,96,1);
+  width: 35%;
+}
+.co__form .item input {
+  font-size:26rpx;
+  text-align: right;
+  font-weight:500;
+  color:rgba(96,96,96,1);
+  height: 100%;
+  flex: 1;
+}
+.co__form .item view {
+  font-size:26rpx;
+  text-align: right;
+  font-weight:500;
+  color:rgba(96,96,96,1);
+  flex: 1;
+}
+.co__form .link {
+  display: flex;
+  align-items: center;
+}
+.co__form .link text {
+  font-size:26rpx;
+  text-align: right;
+  font-weight:500;
+  color:rgba(96,96,96,1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+.co__form .link image {
+  width:18rpx;
+  height:30rpx;
+  margin-left: 15rpx;
+}

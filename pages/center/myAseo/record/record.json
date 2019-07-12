@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的推广记录",
+  "usingComponents": {
+    "empty": "/modules/empty/empty"
+  }
+}

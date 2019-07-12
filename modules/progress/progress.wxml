@@ -1,0 +1,15 @@
+
+<view class="top {{ type ? type : '' }}">
+  <view class="title">{{ title }}</view>
+  <view class="progress">
+    <block wx:for="{{ texts }}" wx:key="{{ index }}">
+      <view class="item">
+        <view class="ico">
+          <image src="/assets/ico_progress_active.png" wx:if="{{ idx >= index }}"></image>
+          <image src="/assets/ico_progress_normal.png" wx:else></image>
+        </view>
+        <view class="text">{{ item }}</view>
+      </view>
+    </block>
+  </view>
+</view>

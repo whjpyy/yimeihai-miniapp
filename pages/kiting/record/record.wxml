@@ -1,0 +1,28 @@
+<!--pages/kiting/record/record.wxml-->
+<block wx:if="{{ dataLoaded }}">
+  <view class="top">
+    <view class="title">共计消费</view>
+    <view class="integral">{{ totalAmount }}</view>
+  </view>
+  <view class="record">
+    <view class="list" wx:if="{{list.length}}">
+      <block wx:for="{{ list }}" wx:key="{{ index }}">
+        <view class="flex-s li">
+          <navigator url="/pages/kiting/progress/progress?entrance=1&id={{item.id}}" class="flex-f flex-vc">
+            <view class="flex-f">
+              <view class="validity">{{ item.createTime }}</view>
+              <view class="condition">
+                <text class="yellow">{{item.status}}</text>
+              </view>
+            </view>
+            <view class="nums">
+              <text>-{{ item.payment }}</text>
+              <image src="/assets/ico_link_arrow_right.png"></image>
+            </view>
+          </navigator>
+        </view>
+      </block>
+    </view>
+    <empty tips="抱歉，暂无消费记录~" class="empty" wx:else />
+  </view>
+</block>

@@ -1,0 +1,75 @@
+page, view, scroll-view, swiper, movable-area, cover-view, text, icon, rich-text,
+progress, button, checkbox-group, checkbox, form, input, label, picker,
+picker-view, radio-group, slider, switch, textarea, navigator, audio, image,
+video, live-player, live-pusher, open-data, web-view {
+  box-sizing: border-box;
+}
+page {
+  min-height: 100%;
+}
+image {
+  display: block;
+}
+.clearfix:after {
+  content: '';
+  width: 0;
+  display: table;
+  clear: both
+}
+.flex {
+  display: flex
+}
+.flex-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-hc {
+  display: flex;
+  justify-content: center;
+}
+.flex-vc {
+  display: flex;
+  align-items: center;
+}
+.flex-hb {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-hcb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-vb {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.flex-vcb {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-s {
+  display: flex;
+  align-items: flex-start;
+}
+.flex-e {
+  display: flex;
+  align-items: flex-end;
+}
+.flex-f {
+  flex: 1;
+  overflow: hidden;
+}
+.link-ico-01 {
+  width:18rpx;
+  height:30rpx;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

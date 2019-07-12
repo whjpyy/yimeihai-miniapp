@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的推广码",
+  "usingComponents": {
+    "authDialog": "/modules/authDialog/authDialog"
+  }
+}

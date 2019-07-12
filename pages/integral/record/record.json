@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "记录",
+  "usingComponents": {
+    "coTitle": "/modules/coTitle/coTitle"
+  }
+}

@@ -1,0 +1,26 @@
+<!--pages/cardPackage/merch/merch.wxml-->
+<block wx:if="{{ dataLoaded }}">
+<view class="section" wx:if="{{merchs.length}}">
+  <coTitle mainTitle="支持商家" showMore="{{ false }}" />
+  <view class="merchs">
+    <block wx:for="{{ merchs }}" wx:key="{{ index }}">
+      <view class="flex-vc box">
+        <image src="{{ item.logo }}"></image>
+        <view class="flex-f flex-vb infos">
+          <view class="name">{{ item.name }}</view>
+          <view class="area">{{ item.areaText }}</view>
+        </view>
+        <view class="check" bindtap="checkMerch" data-idx="{{ index }}">
+          <image src="/assets/ico_check_green.png" wx:if="{{ checkedIdx == index }}"></image>
+          <image src="/assets/ico_check_gray.png" wx:else></image>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<empty tips="抱歉，暂无商家~" wx:else />
+<view class="co__submit-bar">
+  <navigator url="-1" open-type="navigateBack" class="btn orange-btn flex-f">取消</navigator>
+  <view class="btn red-btn flex-f" bindtap="comfirm">确认</view>
+</view>
+</block>

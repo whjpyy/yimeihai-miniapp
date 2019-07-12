@@ -1,0 +1,4 @@
+/* pages/caseDetail/caseDetail.wxss */
+image {
+  width: 100%;
+}

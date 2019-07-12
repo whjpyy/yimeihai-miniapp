@@ -1,0 +1,44 @@
+/* pages/cardPackage/cardPackage.wxss */
+
+page {
+  padding-top: 94rpx;
+}
+
+.top {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  background: rgba(244, 244, 244, 1);
+}
+
+.list {
+  padding: 0 25rpx;
+}
+
+.list .li {
+  border-bottom: rgba(211, 211, 211, 1) solid 1rpx;
+  padding: 35rpx 0;
+}
+
+.list image {
+  width: 57rpx;
+  height: 41rpx;
+  margin-right: 30rpx;
+}
+
+.list .name {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: rgba(25, 25, 25, 1);
+  line-height: 41rpx;
+}
+
+.list .validity {
+  font-size: 26rpx;
+  font-weight: bold;
+  color: rgba(114, 114, 114, 1);
+  line-height: 41rpx;
+  margin-top: 10rpx;
+}

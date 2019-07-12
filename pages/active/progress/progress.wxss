@@ -1,0 +1,104 @@
+/* pages/active/progress/progress.wxss */
+@import '/modules/common/style/submitBar.wxss';
+@import '/modules/common/style/remark.wxss';
+@import '/modules/common/style/form.wxss';
+
+.top-line {
+  border-top: rgba(249, 249, 249, 1) solid 21rpx;
+}
+.bottom-line {
+  border-bottom:rgba(211, 211, 211, .33) solid 1rpx;
+}
+
+.success {
+  height: 160rpx;
+  font-size:36rpx;
+  font-weight:bold;
+  color:rgba(54,54,54,1);
+}
+.success image {
+  width:64rpx;
+  height:64rpx;
+  margin-right: 30rpx;
+}
+
+.infos {
+  background:rgba(255,255,255,1);
+  box-shadow:0px 0px 10rpx 0px rgba(0, 0, 0, 0.1);
+  border-radius:20rpx;
+  position: relative;
+  top: -15rpx;
+}
+
+.tips-a {
+  height: 126rpx;
+  background:rgba(243,243,243,1);
+  line-height: 126rpx;
+  font-size:26rpx;
+  font-weight:500;
+  color:rgba(53,53,53,1);
+  text-align: center;
+}
+
+.co__submit-bar .state-text {
+  font-size:30rpx;
+  font-weight:bold;
+  color:rgba(80,79,78,1);
+}
+
+.use-info .items {
+  box-shadow:0rpx 2rpx 18rpx 0rpx rgba(251,124,124,0.29);
+  border-radius:10rpx;
+  width: 700rpx;
+  margin: 0 auto;
+  padding: 20rpx;
+}
+.use-info .items view {
+  font-size:26rpx;
+  font-weight:500;
+  color:rgba(63,63,63,1);
+  line-height: 45rpx;
+  position: relative;
+  padding: 5rpx 0;
+}
+.use-info .items .btn1 text {
+  width:258rpx;
+  height:65rpx;
+  background:rgba(255,199,147,1);
+  border-radius:10rpx;
+  font-size:24rpx;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  line-height: 65rpx;
+  margin: 0 32rpx;
+}
+.use-info .items .btn1 navigator {
+  width:258rpx;
+  height:65rpx;
+  background:rgba(255,165,165,1);
+  border-radius:10rpx;
+  font-size:24rpx;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  line-height: 65rpx;
+  margin: 0 32rpx;
+}
+.use-info .more1 view {
+  padding: 0;
+  float: left;
+} 
+.use-info .more1 .det0 text {
+  display: block;
+}
+.use-info .more1 .det1 {
+  padding-bottom: 5rpx;
+}
+.use-info .more1 .det2 {
+  padding-top: 5rpx;
+  border-top: rgba(117,117,117,1) solid 1rpx;
+}
+.use-info .red {
+  color: rgba(255, 68, 68, 1);
+}

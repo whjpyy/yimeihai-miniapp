@@ -1,0 +1,23 @@
+<!--pages/cardPackage/success/success.wxml-->
+<view class="flex-c success">
+  <image src="/assets/ico_check_green.png"></image>
+  <text>{{ entrence == 0 ? '消费预约成功' : '转让成功' }}</text>
+</view>
+<view class="infos" wx:if="{{ entrence == 0 }}">
+  <coTitle mainTitle="申请信息" showMore="{{ false }}" />
+  <view class="co__remark">
+    <view>申请时间：{{ bookingInfo.createTime }}</view>
+    <view>预约项目：{{ bookingInfo.bookingItemName }}</view>
+    <view>预约商家：{{ bookingInfo.bookingShopName }}</view>
+    <view>预计上门时间：{{ bookingInfo.bookingTime }}</view>
+  </view>
+</view>
+<view class="infos" wx:else>
+  <coTitle mainTitle="转让信息" showMore="{{ false }}" />
+  <view class="co__remark">
+    <view>转让时间：{{ transferInfo.date }}</view>
+    <view>赠与人手机号：{{ transferInfo.mobile }}</view>
+    <view>赠与人ID：{{ transferInfo.code }}</view>
+  </view>
+</view>
+<view class="tips" wx:if="{{ entrence == 0 }}">请在预约时间内及时享受服务哟~！</view>

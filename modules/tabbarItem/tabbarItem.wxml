@@ -1,0 +1,4 @@
+<view class="flex-c footer-menu-item {{ active ? 'footer-menu-active-item' : '' }}" bind:tap="onClick">
+  <image class="footer-menu-icon" src="{{ icon }}"></image>
+  <text class="footer-menu-text">{{ text }}</text>
+</view>

@@ -1,0 +1,23 @@
+
+.bottom-out {
+  background-color: #f2f2f2;
+  border-radius: 8rpx;
+  width: 700rpx;
+  height: 65rpx;
+  margin: 30rpx auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottom-out image {
+  width: 36rpx;
+  height: 4rpx;
+}
+.bottom-out text {
+  color: #333333;
+  font-size: 24rpx;
+  margin: 0 20rpx;
+}
+.mt-0 {
+  margin-top: 0;
+}

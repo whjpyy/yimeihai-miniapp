@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的团队",
+  "usingComponents": {
+    "authDialog": "/modules/authDialog/authDialog",
+    "coTitle": "/modules/coTitle/coTitle",
+    "empty": "/modules/empty/empty"
+  }
+}

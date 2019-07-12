@@ -1,0 +1,33 @@
+/* pages/center/myAseo/record/record.wxss */
+.items {
+  width: 700rpx;
+  margin: 0 auto;
+}
+.items .item {
+  border-bottom: rgba(211, 211, 211, .33) solid 1rpx;
+  padding: 37rpx 0;
+}
+.items .item:last-child {
+  border-bottom: none;
+}
+.items image {
+  width:86rpx;
+  height:86rpx;
+  border-radius:50%;
+  margin-right: 30rpx;
+}
+.items .infos .nick {
+  font-size:30rpx;
+  font-weight:bold;
+  color:rgba(25,25,25,1);
+  line-height:41rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.items .infos .bottom-bar {
+  font-size:26rpx;
+  font-weight:400;
+  color:rgba(114,114,114,1);
+  margin-top: 15rpx;
+}

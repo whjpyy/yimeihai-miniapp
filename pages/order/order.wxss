@@ -1,0 +1,198 @@
+/* pages/order/order.wxss */
+@import '/modules/common/style/form.wxss';
+@import '/modules/common/style/remark.wxss';
+@import '/modules/common/style/submitBar.wxss';
+
+.header-line {
+  border-top: rgba(249,249,249,1) solid 21rpx;
+}
+.footer-line {
+  border-bottom: rgba(249,249,249,1) solid 21rpx;
+}
+
+.infos, .times, .success {
+  background:rgba(255,255,255,1);
+  box-shadow:0px 0px 10rpx 0px rgba(0, 0, 0, 0.1);
+  border-radius:20rpx;
+  position: relative;
+  top: -15rpx;
+}
+.infos coTitle {
+  position: relative;
+  top: 10rpx;
+}
+
+.buy coTitle {
+  position: relative;
+}
+.buy .card {
+  width: 717rpx;
+  height: 311rpx;
+  margin: 0 auto;
+  position: relative;
+}
+.buy image {
+  width: 100%;
+  height: 100%;
+}
+.buy .intros {
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  text-align: center;
+  padding-top: 65rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.buy .name {
+  font-size:37rpx;
+  font-weight:bold;
+  color:rgba(254, 255, 133, 1);
+  text-shadow:0px 4rpx 1rpx rgba(67,36,152,0.46);
+}
+.buy .validity {
+  font-size:22rpx;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  text-shadow:0px 1rpx 0px rgba(233,0,11,0.63);
+  padding-top: 25rpx;
+}
+.buy .price {
+  min-width:274rpx;
+  height:54rpx;
+  background:rgba(255,255,255,1);
+  padding: 0 30rpx;
+  font-size:37rpx;
+  font-weight:bold;
+  color:rgba(230,133,77,1);
+  line-height: 54rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 20rpx;
+}
+.buy .price text {
+  font-size:28rpx;
+  position: relative;
+  top: -5rpx;
+}
+.buy .tips {
+  font-size:24rpx;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  margin-top: 21rpx;
+}
+
+.times {
+  width:749rpx;
+  height:203rpx;
+  background:rgba(251,250,250,1);
+}
+.times .surplus {
+  font-size:32rpx;
+  font-weight:bold;
+  color:rgba(96,96,96,1);
+  text-align: center;
+  line-height: 1;
+}
+.times .surplus text {
+  color: rgba(255, 86, 97, 1);
+}
+.times .tips {
+  font-size:32rpx;
+  font-weight:500;
+  color:rgba(96,96,96,1);
+  text-align: center;
+  margin-top: 28rpx;
+  line-height: 1;
+}
+
+.recommand .header {
+  width:88rpx;
+  height:88rpx;
+  border-radius:50%;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.pay-way .way {
+  display: inline-block;
+}
+.pay-way .way image {
+  width:42rpx;
+  height:42rpx;
+  margin-right: 17rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.pay-way .way text {
+  font-size:26rpx;
+  font-weight:500;
+  color:rgba(96,96,96,1);
+}
+
+.success {
+  height:203rpx;
+}
+.success image {
+  width:79rpx;
+  height:79rpx;
+  margin-right: 20rpx;
+}
+.success .tips {
+  font-size:36rpx;
+  font-weight:bold;
+  color:rgba(96,96,96,1);
+  line-height: 40rpx;
+}
+.success .text {
+  font-size:32rpx;
+  font-weight:500;
+  color:rgba(96,96,96,1);
+  line-height: 40rpx;
+  margin-top: 20rpx;
+}
+
+.info-slot {
+  padding: 30rpx 25rpx 50rpx;
+}
+.info-slot .b-infos {
+  line-height: 45rpx;
+}
+.info-slot .bindInfos {
+  padding: 25rpx;
+  background:rgba(255,233,233,1);
+  border-radius:10rpx;
+}
+.info-slot .avatar {
+  width:89rpx;
+  height:89rpx;
+  border-radius:50%;
+  margin-right: 30rpx;
+}
+.info-slot .name {
+  font-size:28rpx;
+  font-weight:bold;
+  color:rgba(63,63,63,1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.info-slot .id {
+  font-size:24rpx;
+  font-weight:500;
+  color:rgba(96,96,96,1);
+}
+.info-slot .mobile {
+  font-size:24rpx;
+  font-weight:500;
+  color:rgba(97,97,97,1);
+}
+.info-slot .tips {
+  font-size:24rpx;
+  font-weight:500;
+  color:rgba(63,63,63,1);
+  text-align: center;
+  margin-top: 30rpx;
+}

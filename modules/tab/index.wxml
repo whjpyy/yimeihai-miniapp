@@ -1,0 +1,6 @@
+<!--modules/tab/index.wxml-->
+<scroll-view bindscroll="onscrollFn" scroll-left="{{scrollLeft}}" scroll-x>
+  <view class='tapall'>
+    <view wx:for="{{tabs}}" wx:key="{{index}}" bindtap='ontapItem' data-value="{{index}}" class='tabitem {{active==index?"active":""}}'>{{item}}</view>
+  </view>
+</scroll-view>

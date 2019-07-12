@@ -1,0 +1,3 @@
+<view class="footer-menu">
+  <slot />
+</view>

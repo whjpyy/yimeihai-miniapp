@@ -1,0 +1,106 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"uglifyFileName": true,
+		"checkInvalidKey": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.6",
+	"appid": "wx5728d8625d6e5f9d",
+	"projectname": "yimeihai-miniapp",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 7,
+			"list": [
+				{
+					"id": 0,
+					"name": "扫码进入推广",
+					"pathName": "pages/invitation/invitation",
+					"query": "scene=10001",
+					"scene": 1011
+				},
+				{
+					"id": -1,
+					"name": "活动详情",
+					"pathName": "pages/active/progress/progress",
+					"query": "id=79ff1050b92846729650892caa6d97ba",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的推广码",
+					"pathName": "pages/center/myAseo/myAseo",
+					"query": "userId=d611e0dba7a64d27a4413dde03a2c1ab&scene=10001",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "填写订单",
+					"pathName": "pages/order/order",
+					"query": "pidx=0&cardId=3211f1286f4644be8796a00b2d8f4a35",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "好友推荐",
+					"pathName": "pages/invitation/invitation",
+					"query": "scene=10002",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的卡包",
+					"pathName": "pages/cardPackage/cardPackage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提现",
+					"pathName": "pages/kiting/kiting",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "机构列表",
+					"pathName": "pages/medical/medical",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

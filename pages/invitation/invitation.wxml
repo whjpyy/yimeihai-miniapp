@@ -1,0 +1,37 @@
+<!--pages/invitation/invitation.wxml-->
+<view class="header">
+  <image src="/assets/bg_center_header.jpg" class="bg"></image>
+  <view class="h-infos">
+    <image src="{{ myInfo.icon }}" class="head"></image>
+    <view class="nickname">{{ myInfo.fullName }}</view>
+    <view class="flex-hcb infos">
+      <view class="tel">注册手机号：{{ myInfo.mobile }}</view>
+      <view class="code">邀请码：{{ myInfo.invitationCode }}</view>
+    </view>
+  </view>
+  <view class="flex-vc vip">
+    <image src="/assets/ico_vip.png"></image>
+    <text>{{ myInfo.memberLevelName }}</text>
+  </view>
+</view>
+<view class="items">
+  <navigator url="/pages/vipCard/vipCard" class="flex-vc item">
+    <image src="/assets/ico_code.png" class="ico"></image>
+    <text class="flex-f t">购买会员卡</text>
+    <image src="/assets/ico_link_arrow_right_gray.png" class="link"></image>
+  </navigator>
+  <navigator url="/pages/active/active" class="flex-vc item">
+    <image src="/assets/ico_team.png" class="ico"></image>
+    <text class="flex-f t">报名参加活动</text>
+    <image src="/assets/ico_link_arrow_right_gray.png" class="link"></image>
+  </navigator>
+</view>
+<view class="section">
+  <coTitle mainTitle="其他信息" showMore="{{ false }}" />
+  <view class="co__remark">
+    <view>{{ desc }}</view>
+  </view>
+</view>
+<footerMenu active="3" />
+<!-- 授权弹窗 -->
+<authDialog bind:authover="onAuthOver" />

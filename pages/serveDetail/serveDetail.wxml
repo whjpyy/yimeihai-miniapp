@@ -1,0 +1,24 @@
+<!--pages/serveDetail/serveDetail.wxml-->
+<block wx:if="{{ dataLoaded }}">
+<!-- banner -->
+<swiper class="banner" indicator-dots="true" autoplay="true" circular="true">
+  <!-- <block wx:for="{{ banner }}" wx:key="{{ index }}"> -->
+    <swiper-item>
+      <image src="{{ logo }}"></image>
+    </swiper-item>
+  <!-- </block> -->
+</swiper>
+<!-- 信息 -->
+<view class="flex-vc infos">
+  <view class="name">{{ name }}</view>
+  <view class="tag">{{ intro || name }}</view>
+</view>
+<!-- 介绍 -->
+<view class="intro">
+  <coTitle mainTitle="项目介绍" showMore="{{ false }}" />
+  <view class="detail">
+    <image src="{{ content }}" style="height:{{ detailImgHeight }}" bindload="detailImgLoad" lazy-load="true"></image>
+  </view>
+</view>
+<bottomOut showBar="{{ showBottomOut }}" />
+</block>

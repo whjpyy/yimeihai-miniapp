@@ -1,0 +1,40 @@
+.co-title {
+  width: 700rpx;
+  margin: 0 auto;
+  padding: 25rpx 0 30rpx;
+  display: flex;
+  align-items: center;
+}
+.co-title .title {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.co-title .title-icon {
+  width: 27rpx;
+  height: 18rpx;
+  margin-right: 15rpx;
+}
+.co-title .main-title {
+  color: #3f3f3f;
+  font-size: 36rpx;
+  font-weight:bold;
+  margin-right: 15rpx;
+}
+.co-title .sub-title {
+  color: #3f3f3f;
+  font-size: 24rpx;
+  padding-top: 10rpx;
+}
+.co-title .more {
+  color: #5b5b5b;
+  font-size: 25rpx;
+  padding-top: 5rpx;
+  display: flex;
+  align-items: center;
+}
+.co-title .link-icon {
+  width: 7rpx;
+  height: 12rpx;
+  margin-left: 10rpx;
+}

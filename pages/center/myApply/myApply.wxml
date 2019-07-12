@@ -1,0 +1,33 @@
+<!--pages/myApply/myApply.wxml-->
+<block wx:if="{{ dataLoaded }}">
+<view class="top">
+  <!-- <view class="flex-vc" bindtap="picker">
+    <text>{{ pickerValue }}</text>
+    <image src="/assets/ico_arrow_down.png"></image>
+  </view> -->
+  <my-tab tabs="{{columns}}" bind:onSelected="onChange"></my-tab>
+</view>
+<view class="list" wx:if="{{orders.length}}">
+  <block wx:for="{{ orders }}" wx:key="{{ index }}">
+    <navigator url="/pages/active/progress/progress?id={{item.id}}" class="li">
+      <view class="flex-hcb top-bar">
+        <view class="order">报名单号：{{ item.reportOrderId }}</view>
+        <!-- <view class="state">预约状态：{{ pickerValue }}</view> -->
+      </view>
+      <view class="flex-vc bottom-bar">
+        <view class="flex-f infos">
+          <view class="name">{{ item.shopName }}</view>
+          <view class="date">报名时间：{{ item.createTime }}</view>
+        </view>
+        <image src="/assets/ico_link_arrow_right.png"></image>
+      </view>
+    </navigator>
+  </block>
+</view>
+<empty tips="抱歉，暂无{{pickerValue}}记录~" wx:else />
+<van-popup show="{{ showPicker }}" position="bottom">
+  <van-picker show-toolbar="true" columns="{{ columns }}" bind:confirm="pickerConfirm" bind:cancel="pickerCancel" />
+</van-popup>
+</block>
+<!-- 授权弹窗 -->
+<authDialog bind:authover="onAuthOver" />

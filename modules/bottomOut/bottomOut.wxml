@@ -1,0 +1,7 @@
+<van-transition show="{{ showBar }}">
+  <view class="bottom-out {{ topMargin ? '' : 'mt-0' }}">
+    <image src="/assets/ico_on_earth.png"></image>
+    <text>已经到底啦</text>
+    <image src="/assets/ico_on_earth.png"></image>
+  </view>
+</van-transition>

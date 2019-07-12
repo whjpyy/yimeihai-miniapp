@@ -1,0 +1,67 @@
+<!--pages/center/myTeam/detail/detail.wxml-->
+<view>
+  <view wx:if="{{itemInfo.id}}">
+    <view class="section">
+      <coTitle mainTitle="基本信息" showMore="{{ false }}" />
+      <view class="co__form items">
+        <view class="item">
+          <text>头像</text>
+          <view>
+            <image src="{{itemInfo.icon}}" class="head"></image>
+          </view>
+        </view>
+        <view class="item">
+          <text>昵称</text>
+          <view>{{itemInfo.fullName}}</view>
+        </view>
+        <view class="item">
+          <text>注册手机号</text>
+          <view>{{itemInfo.mobile}}</view>
+        </view>
+        <view class="item">
+          <text>会员等级</text>
+          <view>{{itemInfo.memberLevelName}}</view>
+        </view>
+        <view class="item">
+          <text>用户ID</text>
+          <view>{{itemInfo.code}}</view>
+        </view>
+        <view class="item">
+          <text>注册时间</text>
+          <view>{{itemInfo.createTime}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="section" style='display:none'>
+      <coTitle mainTitle="关系信息" showMore="{{ false }}" />
+      <view class="co__form items">
+        <view class="item">
+          <text>与我的关系</text>
+          <view>间接上级</view>
+        </view>
+        <view class="item">
+          <text>绑定时间</text>
+          <view>2019-01-21 12:21:56</view>
+        </view>
+        <view class="item">
+          <text>绑定来源</text>
+          <view>购买会员卡</view>
+        </view>
+        <view class="item">
+          <text>直接上级</text>
+          <view>微信昵称</view>
+        </view>
+      </view>
+    </view>
+    <view class="section">
+      <coTitle mainTitle="旗下团队" showMore="{{ false }}" />
+      <view class="co__remark">
+        <view>团队人数：{{itemInfo.total}}人</view>
+        <view wx:for="{{itemInfo.levelCount}}" wx:key="{{index}}">{{item.levelCode}}：{{item.teamTotal}}人</view>
+      </view>
+    </view>
+  </view>
+  <empty tips="抱歉，暂无成员信息~" wx:else />
+</view>
+<!-- 授权弹窗 -->
+<authDialog bind:authover="onAuthOver" />

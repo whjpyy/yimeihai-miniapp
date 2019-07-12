@@ -1,0 +1,47 @@
+<!--pages/integral/record/record.wxml-->
+<block wx:if="{{ dataLoaded }}">
+  <view class="surplu-return">
+    <coTitle mainTitle="学习明细详情" showMore="{{ false }}" />
+    <view class="list">
+      <view class="flex-s li">
+        <view class="flex-f">
+          <view class="validity">{{ validate }}</view>
+          <view class="content">
+            <text wx:if="{{remark === '报名活动返利'}}">报名活动获得</text>
+            <text wx:else>{{remark}}</text>
+          </view>
+          <view class="return-cash">
+            <view class="should">应获得：
+              <text>{{ shouldAmount }}</text>
+            </view>
+            <view class="finish">已获得：
+              <text>{{ alreadyAmount }}</text>
+            </view>
+            <view class="surplus">剩余：
+              <text>{{ surplusAmount }}</text>
+            </view>
+          </view>
+          <!-- <view class="condition">
+          <text class="yellow">需每日签到</text>
+          <text class="red">返现记录</text>
+        </view> -->
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="record">
+    <coTitle mainTitle="记录详情" showMore="{{ false }}" />
+    <view class="list">
+      <block wx:for="{{ rebateOrderRecordList }}" wx:key="{{ index }}">
+        <view class="flex-s li">
+          <view class="flex-f">
+            <view class="validity">{{ item.createTime }}</view>
+            <view class="condition">
+              <text class="yellow">已获得：{{ item.amount }}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</block>

@@ -1,0 +1,30 @@
+<!--pages/cardPackage/cardPackage.wxml-->
+<block wx:if="{{ dataLoaded }}">
+<view class="top">
+  <!-- <view class="flex-vc" bindtap="picker">
+    <text>{{ pickerValue }}</text>
+    <image src="/assets/ico_arrow_down.png"></image>
+  </view> -->
+  <my-tab tabs="{{columns}}" bind:onSelected="onChange"></my-tab>
+</view>
+<view class="list" wx:if="{{ list.length }}">
+  <block wx:for="{{ list }}" wx:key="{{ index }}">
+    <view class="li">
+      <navigator url="/pages/cardPackage/detail/detail?state={{pickerIndex}}&cardId={{item.id}}" class="flex-vc">
+        <image src="/assets/ico_card_pack.png"></image>
+        <view class="infos">
+          <view class="name">{{ item.consumptionCardName }}</view>
+          <view class="validity">有效期：{{ item.validate }}</view>
+        </view>
+      </navigator>
+    </view>
+  </block>
+</view>
+<empty tips="抱歉，暂无{{pickerValue}}消费卡~" wx:else />
+</block>
+<footerMenu active="2" />
+<van-popup show="{{ showPicker }}" position="bottom">
+  <van-picker show-toolbar="true" columns="{{ columns }}" bind:confirm="pickerConfirm" bind:cancel="pickerCancel" />
+</van-popup>
+<!-- 授权弹窗 -->
+<authDialog bind:authover="onAuthOver" />

@@ -1,0 +1,59 @@
+<!--pages/kiting/progress/progress.wxml-->
+<view class="flex-c success" wx:if="{{ progressIndex == 0 && entrance == 0 }}">
+  <image src="/assets/ico_check_green.png"></image>
+  <text>申请消费成功</text>
+</view>
+<progress title="活动流程" idx="{{ progressIndex }}" type="kiting" />
+<view class="infos">
+  <view class="apply">
+    <coTitle mainTitle="申请信息" showMore="{{ false }}" />
+    <view class="co__remark">
+      <view>{{ createTime }}</view>
+      <view class="red">消费学分：{{ cashWithdrawalAmount }}</view>
+      <view class="bold">银行信息：</view>
+      <view>开户行：{{ accountBank }}</view>
+      <view>账号：{{ accountNumber }}</view>
+      <view>持卡人：{{ accountName }}</view>
+      <view>身份证号：{{ accountIdentId }}</view>
+    </view>
+  </view>
+  <view class="check" wx:if="{{ progressIndex >= 1 }}">
+    <coTitle mainTitle="审核信息" showMore="{{ false }}" />
+    <view class="co__remark">
+      <view class="flex-hcb">
+        <text>{{ auditTime }}</text>
+        <text>{{ auditStatusDesc }}</text>
+      </view>
+      <block wx:if="{{ status == 2 }}">
+        <view>原因：</view>
+        <view>{{ reason }}</view>
+      </block>
+    </view>
+  </view>
+  <view class="cash" wx:if="{{ progressIndex >= 2 }}">
+    <coTitle mainTitle="打款信息" showMore="{{ false }}" />
+    <view class="co__remark">
+      <view class="flex-hcb">
+        <text>{{ paymentTime }}</text>
+        <text>已打款</text>
+      </view>
+      <!-- <view>打款单号：{{ paymentOrderId }}</view> -->
+    </view>
+  </view>
+  <view class="over" wx:if="{{ progressIndex >= 3 }}">
+    <coTitle mainTitle="回执信息" showMore="{{ false }}" />
+    <view class="co__remark">
+      <view class="flex-hcb">
+        <text>{{ receiptTime }}</text>
+        <text>打款成功</text>
+      </view>
+      <view>回执单号：{{ receiptOrderId }}</view>
+    </view>
+  </view>
+</view>
+<view class="co__submit-bar" wx:if="{{ progressIndex == 0 && entrance == 0 }}">
+  <navigator url="/pages/kiting/record/record" open-type="redirect" class="btn red-btn flex-f">查看我的转账信息</navigator>
+</view>
+<view class="co__submit-bar" wx:if="{{ progressIndex == 1 && status == 2 }}">
+  <navigator url="/pages/kiting/kiting" open-type="redirect" class="btn red-btn flex-f">重新申请</navigator>
+</view>

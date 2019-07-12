@@ -1,0 +1,41 @@
+<!--pages/kiting/kiting.wxml-->
+<form bindsubmit="submit">
+  <view class="kiting">
+    <view class="flex-hcb top">
+      <view class="t">转出学分</view>
+      <navigator url="/pages/kiting/record/record">消费历史</navigator>
+    </view>
+    <view class="flex-vc amount">
+      <view class="tag">￥</view>
+      <input type="digit" placeholder="请输入消费学分(0.00)" maxlength="7" placeholder-class="placeholder" class="flex-f" name="price" value="{{moneny}}" bindinput="inputMoney" bindblur="blurMoney"></input>
+    </view>
+    <view class="flex-hcb bottom">
+      <text>剩余学分：{{amount}}</text>
+      <!-- <text>1学分=1元</text> -->
+    </view>
+  </view>
+  <view class="infos">
+      <coTitle mainTitle="消费信息" showMore="{{ false }}" />
+      <view class="co__form items">
+        <view class="item">
+          <text>开户行支行：</text>
+          <input placeholder="如:中国银行四川省成都市解放路支行" name="accountBank" value='{{accountBank}}'></input>
+        </view>
+        <view class="item">
+          <text>银行卡号：</text>
+          <input type="number" placeholder="请输入银行卡号" name="accountNumber" value='{{accountNumber}}'></input>
+        </view>
+        <view class="item">
+          <text>持卡人名称：</text>
+          <input placeholder="请输入持卡人名称" name="accountName" value='{{accountName}}'></input>
+        </view>
+        <view class="item">
+          <text>身份证号：</text>
+          <input placeholder="请输入身份证号" name="accountIdentId" value='{{accountIdentId}}'></input>
+        </view>
+      </view>
+  </view>
+  <view class="co__submit-bar">
+    <button class="btn red-btn flex-f" form-type="submit">确认转出</button>
+  </view>
+</form>
